@@ -4,7 +4,7 @@
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 26px;
+  margin-top: 26px
 }
 
 .audience-cover-note span,
@@ -18,14 +18,14 @@
   color: var(--negro);
   padding: 8px 12px;
   font-size: .78rem;
-  font-weight: 700;
+  font-weight: 700
 }
 
 .insight-grid {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 22px;
-  align-items: stretch;
+  align-items: stretch
 }
 
 .insight-panel,
@@ -35,28 +35,26 @@
   background: var(--gris-claro);
   border: 1px solid var(--gris-borde);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 24px
 }
 
 .insight-panel.dark {
   background: var(--negro);
-  color: var(--blanco);
-  border-left: 8px solid var(--amarillo);
-}
+  color: var(--blanco);border:1px solid var(--amarillo)}
 
 .insight-panel.dark h3,
 .insight-panel.dark strong {
-  color: var(--amarillo);
+  color: var(--amarillo)
 }
 
 .insight-panel.dark p,
 .insight-panel.dark li {
-  color: #e8e8e8;
+  color: #e8e8e8
 }
 
 .meta-read {
   display: grid;
-  gap: 12px;
+  gap: 12px
 }
 
 .meta-row {
@@ -65,21 +63,21 @@
   gap: 14px;
   align-items: start;
   padding: 14px 0;
-  border-bottom: 1px solid var(--gris-borde);
+  border-bottom: 1px solid var(--gris-borde)
 }
 
 .meta-row:last-child {
-  border-bottom: 0;
+  border-bottom: 0
 }
 
 .meta-row strong {
   color: var(--negro);
-  font-size: .92rem;
+  font-size: .92rem
 }
 
 .meta-row p {
   margin: 0;
-  font-size: .9rem;
+  font-size: .9rem
 }
 
 .audience-layout {
@@ -91,7 +89,7 @@
   border: 1px solid var(--gris-borde);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 16px 44px rgba(0,0,0,.055);
+  box-shadow: none
 }
 
 .audience-card {
@@ -105,7 +103,7 @@
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
-  padding: 0 24px 28px;
+  padding: 0 24px 28px
 }
 
 .audience-card::before {
@@ -113,7 +111,7 @@
   display: block;
   position: absolute;
   inset: 0 0 315px;
-  background: #d7d7d7;
+  background: #d7d7d7
 }
 
 .audience-card::after {
@@ -125,12 +123,12 @@
   height: 315px;
   background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.96));
   border-top: 6px solid var(--amarillo);
-  z-index: 1;
+  z-index: 1
 }
 
 .audience-card > * {
   position: relative;
-  z-index: 2;
+  z-index: 2
 }
 
 .audience-photo {
@@ -141,7 +139,7 @@
   height: calc(100% - 315px);
   object-fit: cover;
   object-position: center top;
-  filter: saturate(.98) contrast(1.02);
+  filter: saturate(.98) contrast(1.02)
 }
 
 .audience-number {
@@ -158,7 +156,7 @@
   justify-content: center;
   font-weight: 700;
   margin: 0;
-  box-shadow: 0 6px 16px rgba(0,0,0,.14);
+  box-shadow: 0 4px 12px rgba(0,0,0,.18)
 }
 
 .audience-card h3 {
@@ -168,31 +166,31 @@
   margin-bottom: 12px;
   background: rgba(255,255,255,.86);
   box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  -webkit-box-decoration-break: clone
 }
 
 .audience-card p {
-  font-size: .95rem;
+  font-size: .95rem
 }
 
 .intent-row {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-  margin: 18px 0 0;
+  margin: 18px 0 0
 }
 
 .intent-pill {
   background: var(--amarillo);
   border-color: var(--amarillo);
-  font-size: .72rem;
+  font-size: .75rem
 }
 
 .detail-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
-  padding: 28px 30px 0;
+  padding: 28px 30px 0
 }
 
 .detail-box {
@@ -201,7 +199,7 @@
   border-top: 1px solid var(--gris-medio);
   border-radius: 0;
   padding: 18px 20px 18px 0;
-  min-height: 154px;
+  min-height: 154px
 }
 
 .detail-box h4,
@@ -209,22 +207,20 @@
 .team-card h4 {
   color: var(--negro);
   font-size: .78rem;
-  letter-spacing: .7px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+  margin-bottom: 10px
 }
 
 .detail-box ul,
 .signal-card ul,
 .team-card ul {
-  margin-top: 0;
+  margin-top: 0
 }
 
 .detail-box li,
 .signal-card li,
 .team-card li {
   font-size: .84rem;
-  line-height: 1.45;
+  line-height: 1.45
 }
 
 .message-box {
@@ -236,11 +232,11 @@
   border-left: 0;
   border-top: 1px solid var(--gris-borde);
   border-bottom: 1px solid var(--gris-borde);
-  position: relative;
+  position: relative
 }
 
 .message-box h4 {
-  color: var(--gris-medio);
+  color: var(--gris-medio)
 }
 
 .message-box p {
@@ -249,7 +245,7 @@
   font-weight: 700;
   margin: 0 0 10px;
   padding: 0 34px;
-  text-align: center;
+  text-align: center
 }
 
 .message-box p::before,
@@ -258,21 +254,21 @@
   font-size: 2.4rem;
   line-height: 0;
   position: relative;
-  top: 10px;
+  top: 10px
 }
 
-.message-box p::before { content: "“"; margin-right: 8px; }
-.message-box p::after { content: "”"; margin-left: 8px; }
+.message-box p::before { content: "“"; margin-right: 8px }
+.message-box p::after { content: "”"; margin-left: 8px }
 
 .message-box .copy-list {
-  justify-content: center;
+  justify-content: center
 }
 
 .copy-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 12px;
+  margin-top: 12px
 }
 
 .copy-list span {
@@ -282,7 +278,7 @@
   color: var(--negro);
   border-radius: 999px;
   padding: 7px 10px;
-  font-size: .76rem;
+  font-size: .76rem
 }
 
 .signal-grid {
@@ -290,7 +286,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
   margin-top: 0;
-  padding: 0 30px 28px;
+  padding: 0 30px 28px
 }
 
 .signal-card {
@@ -298,22 +294,20 @@
   border: 0;
   border-right: 1px solid var(--gris-borde);
   border-radius: 0;
-  padding: 18px 16px 0 0;
+  padding: 18px 16px 0 0
 }
 
-.signal-card:last-child { border-right: 0; padding-right: 0; padding-left: 16px; }
-.signal-card:nth-child(2) { padding-left: 16px; }
+.signal-card:last-child { border-right: 0; padding-right: 0; padding-left: 16px }
+.signal-card:nth-child(2) { padding-left: 16px }
 
 .signal-card.accent {
   background: var(--gris-claro);
-  border-left: 5px solid var(--amarillo);
-  padding-left: 16px;
-}
+  padding-left: 16px;border:1px solid var(--amarillo)}
 
 .angle-method-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 18px
 }
 
 .method-card {
@@ -321,30 +315,30 @@
   border: 1px solid var(--gris-borde);
   border-radius: var(--radius);
   padding: 22px;
-  border-top: 5px solid var(--amarillo);
+  border-top: 5px solid var(--amarillo)
 }
 
 .method-card.dark {
   background: var(--negro);
   color: var(--blanco);
-  border-top-color: var(--amarillo);
+  border-top-color: var(--amarillo)
 }
 
 .method-card.dark h3,
 .method-card.dark strong {
-  color: var(--amarillo);
+  color: var(--amarillo)
 }
 
 .method-card.dark p,
 .method-card.dark li {
-  color: #e7e7e7;
+  color: #e7e7e7
 }
 
 .angle-formula {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 18px
 }
 
 .formula-step {
@@ -352,7 +346,7 @@
   border: 1px solid var(--gris-borde);
   border-radius: var(--radius);
   padding: 16px;
-  min-height: 118px;
+  min-height: 118px
 }
 
 .formula-step span {
@@ -365,59 +359,55 @@
   color: var(--amarillo);
   border-radius: 50%;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .formula-step h4 {
   font-size: .8rem;
-  text-transform: uppercase;
-  letter-spacing: .4px;
-  margin-bottom: 6px;
+  margin-bottom: 6px
 }
 
 .formula-step p {
   font-size: .78rem;
   line-height: 1.45;
-  margin: 0;
+  margin: 0
 }
 
 .angle-matrix {
   display: grid;
-  gap: 10px;
+  gap: 10px
 }
 
 .angle-row {
   display: grid;
   grid-template-columns: 170px repeat(5, 1fr);
   gap: 8px;
-  align-items: stretch;
+  align-items: stretch
 }
 
 .angle-row.header span {
   background: var(--negro);
-  color: var(--amarillo);
+  color: var(--amarillo)
 }
 
 .angle-row span {
   background: var(--gris-claro);
   border: 1px solid var(--gris-borde);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   padding: 10px;
-  font-size: .74rem;
+  font-size: .75rem;
   font-weight: 700;
-  color: var(--negro);
+  color: var(--negro)
 }
 
 .angle-row span:first-child {
-  background: var(--blanco);
-  border-left: 5px solid var(--amarillo);
-}
+  background: var(--blanco);border:1px solid var(--amarillo)}
 
 .angle-dot {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: center
 }
 
 .matrix-kicker {
@@ -426,11 +416,9 @@
   color: var(--negro);
   border-radius: 999px;
   padding: 6px 12px;
-  font-size: .72rem;
+  font-size: .75rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .4px;
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .listening-grid,
@@ -438,20 +426,20 @@
 .jtbd-grid,
 .business-grid {
   display: grid;
-  gap: 16px;
+  gap: 16px
 }
 
 .listening-grid {
-  grid-template-columns: 1.05fr .95fr;
+  grid-template-columns: 1.05fr .95fr
 }
 
 .profile-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr))
 }
 
 .jtbd-grid,
 .business-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
 .matrix-card {
@@ -459,63 +447,62 @@
   border: 1px solid var(--gris-borde);
   border-radius: var(--radius);
   padding: 22px;
-  border-top: 5px solid var(--amarillo);
+  border-top: 5px solid var(--amarillo)
 }
 
 .matrix-card.dark {
   background: var(--negro);
   color: var(--blanco);
-  border-top-color: var(--amarillo);
+  border-top-color: var(--amarillo)
 }
 
 .matrix-card.dark h3,
 .matrix-card.dark strong {
-  color: var(--amarillo);
+  color: var(--amarillo)
 }
 
 .matrix-card.dark p,
 .matrix-card.dark li {
-  color: #e7e7e7;
+  color: #e7e7e7
 }
 
 .matrix-card h3 {
   font-size: 1.05rem;
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .matrix-card p {
   font-size: .88rem;
-  line-height: 1.55;
+  line-height: 1.55
 }
 
 .matrix-card li {
   font-size: .84rem;
-  line-height: 1.45;
+  line-height: 1.45
 }
 
 .quote-stack {
   display: grid;
   gap: 9px;
-  margin-top: 10px;
+  margin-top: 10px
 }
 
 .quote-stack span {
   display: block;
   background: var(--blanco);
   border: 1px solid var(--gris-borde);
-  border-left: 5px solid var(--amarillo);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   padding: 10px 12px;
   color: var(--negro);
   font-size: .83rem;
-  font-weight: 700;
+  font-weight: 700
 }
 
 .journey-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 18px
 }
 
 .journey-step {
@@ -524,14 +511,14 @@
   border-radius: var(--radius);
   padding: 16px;
   border-top: 4px solid var(--amarillo);
-  min-height: 132px;
+  min-height: 132px
 }
 
 .journey-step strong {
   display: block;
   color: var(--negro);
   margin-bottom: 6px;
-  font-size: .88rem;
+  font-size: .88rem
 }
 
 .journey-step span {
@@ -539,15 +526,13 @@
   color: var(--gris-medio);
   font-size: .75rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .35px;
-  margin-bottom: 8px;
+  margin-bottom: 8px
 }
 
 .journey-step p {
   font-size: .78rem;
   line-height: 1.45;
-  margin: 0;
+  margin: 0
 }
 
 .territory-row {
@@ -555,31 +540,31 @@
   grid-template-columns: 110px 1fr;
   gap: 10px;
   padding: 9px 0;
-  border-bottom: 1px solid var(--gris-borde);
+  border-bottom: 1px solid var(--gris-borde)
 }
 
 .territory-row:last-child {
-  border-bottom: 0;
+  border-bottom: 0
 }
 
 .territory-row strong {
   color: var(--negro);
-  font-size: .84rem;
+  font-size: .84rem
 }
 
 .territory-row span {
   color: var(--gris-oscuro);
-  font-size: .84rem;
+  font-size: .84rem
 }
 
 .objection-table {
-  margin-top: 18px;
+  margin-top: 18px
 }
 
 .architecture-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 18px
 }
 
 .arch-card {
@@ -587,34 +572,33 @@
   border: 1px solid var(--gris-borde);
   border-radius: var(--radius);
   padding: 22px;
-  border-top: 5px solid var(--amarillo);
+  border-top: 5px solid var(--amarillo)
 }
 
 .arch-card h3 {
   font-size: 1rem;
-  margin-bottom: 8px;
+  margin-bottom: 8px
 }
 
 .arch-card p {
-  font-size: .86rem;
+  font-size: .86rem
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 16px
 }
 
 .team-card {
   background: var(--blanco);
-  border-top: 5px solid var(--amarillo);
+  border-top: 5px solid var(--amarillo)
 }
 
 .mini-note {
   color: var(--gris-medio);
   font-size: .78rem;
-  font-style: italic;
-  margin-top: 10px;
+  margin-top: 10px
 }
 
 /* === Barreras reales: evidencia WhatsApp === */
@@ -623,13 +607,13 @@
   grid-template-columns: 1.15fr .85fr;
   gap: 22px;
   align-items: stretch;
-  margin-top: 20px;
+  margin-top: 20px
 }
 
 .barrier-list {
   display: grid;
   gap: 12px;
-  margin-top: 4px;
+  margin-top: 4px
 }
 
 .barrier-row {
@@ -639,16 +623,15 @@
   align-items: center;
   background: var(--blanco);
   border: 1px solid var(--gris-borde);
-  border-left: 5px solid var(--amarillo);
   border-radius: var(--radius);
-  padding: 15px 20px;
+  padding: 15px 20px
 }
 
 .barrier-row .b-name strong {
   display: block;
   color: var(--negro);
   font-size: .96rem;
-  line-height: 1.2;
+  line-height: 1.2
 }
 
 .barrier-row .b-name span {
@@ -656,28 +639,26 @@
   color: var(--gris-medio);
   font-size: .78rem;
   margin-top: 4px;
-  line-height: 1.35;
+  line-height: 1.35
 }
 
 .b-count {
-  text-align: center;
+  text-align: center
 }
 
 .b-count strong {
   display: block;
   font-size: 1.5rem;
   color: var(--negro);
-  line-height: 1;
+  line-height: 1
 }
 
 .b-count span {
   display: block;
   margin-top: 4px;
-  font-size: .68rem;
+  font-size: .75rem;
   color: var(--gris-medio);
-  text-transform: uppercase;
-  letter-spacing: .4px;
-  font-weight: 700;
+  font-weight: 700
 }
 
 .b-track {
@@ -685,37 +666,37 @@
   background: #ededed;
   border: 1px solid #e2e2e2;
   border-radius: 999px;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .b-fill {
   height: 100%;
   background: var(--amarillo);
   border-radius: 999px;
-  width: var(--w);
+  width: var(--w)
 }
 
-.b-fill.low { background: #d94f4f; }
-.b-fill.mid { background: #111; }
+.b-fill.low { background: #d94f4f }
+.b-fill.mid { background: #111 }
 
 .b-meter small {
   display: block;
   margin-top: 7px;
-  font-size: .74rem;
+  font-size: .75rem;
   font-weight: 700;
-  color: var(--negro);
+  color: var(--negro)
 }
 
 .b-meter small em {
   font-style: normal;
   color: var(--gris-medio);
-  font-weight: 600;
+  font-weight: 600
 }
 
 /* Prioridades accionables */
 .priority-list {
   display: grid;
-  gap: 14px;
+  gap: 14px
 }
 
 .priority-item {
@@ -725,9 +706,8 @@
   align-items: center;
   background: var(--gris-claro);
   border: 1px solid var(--gris-borde);
-  border-left: 5px solid var(--amarillo);
   border-radius: var(--radius);
-  padding: 18px 22px;
+  padding: 18px 22px
 }
 
 .priority-item .p-rank {
@@ -740,47 +720,45 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.15rem
 }
 
 .priority-item h4 {
   font-size: 1rem;
-  margin-bottom: 4px;
+  margin-bottom: 4px
 }
 
 .priority-item p {
   font-size: .84rem;
   margin: 0;
   color: var(--gris-oscuro);
-  line-height: 1.5;
+  line-height: 1.5
 }
 
 .priority-item .p-metric {
-  text-align: right;
+  text-align: right
 }
 
 .priority-item .p-metric strong {
   display: block;
   font-size: 1.4rem;
   color: var(--negro);
-  line-height: 1;
+  line-height: 1
 }
 
 .priority-item .p-metric span {
   display: block;
   margin-top: 5px;
-  font-size: .7rem;
+  font-size: .75rem;
   color: var(--gris-medio);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .3px;
+  font-weight: 700
 }
 
 /* Mensajes clave y acciones tácticas */
 .tactic-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 16px
 }
 
 .tactic-card {
@@ -790,7 +768,7 @@
   border-radius: var(--radius);
   padding: 20px 22px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column
 }
 
 .tactic-card .t-barrier {
@@ -798,13 +776,11 @@
   align-self: flex-start;
   background: var(--negro);
   color: var(--amarillo);
-  font-size: .66rem;
+  font-size: .75rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .5px;
   padding: 5px 11px;
   border-radius: 999px;
-  margin-bottom: 12px;
+  margin-bottom: 12px
 }
 
 .tactic-card .t-msg {
@@ -813,42 +789,40 @@
   color: var(--negro);
   line-height: 1.35;
   margin: 0 0 12px;
-  padding-left: 14px;
-  border-left: 3px solid var(--amarillo);
-}
+  padding-left: 14px;border:1px solid var(--amarillo)}
 
 .tactic-card .t-action {
   font-size: .84rem;
   color: var(--gris-oscuro);
   line-height: 1.55;
-  margin: 0;
+  margin: 0
 }
 
 .tactic-card .t-action strong {
-  color: var(--negro);
+  color: var(--negro)
 }
 
 @media(max-width: 992px) {
   .evidence-lead,
   .tactic-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr
   }
 
   .barrier-row {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 12px
   }
 
-  .b-count { text-align: left; }
+  .b-count { text-align: left }
 
   .priority-item {
     grid-template-columns: 44px 1fr;
-    gap: 14px;
+    gap: 14px
   }
 
   .priority-item .p-metric {
     grid-column: 2;
-    text-align: left;
+    text-align: left
   }
 
   .insight-grid,
@@ -864,23 +838,23 @@
   .jtbd-grid,
   .business-grid,
   .journey-strip {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr
   }
 
   .audience-card {
-    position: relative;
+    position: relative
   }
 
   .meta-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr
   }
 
   .angle-matrix {
     overflow-x: auto;
-    padding-bottom: 8px;
+    padding-bottom: 8px
   }
 
   .angle-row {
-    min-width: 860px;
+    min-width: 860px
   }
 }

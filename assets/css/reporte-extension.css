@@ -9,22 +9,22 @@
 .ads-grid,
 .ad-card {
   min-width: 0;
-  max-width: 100%;
+  max-width: 100%
 }
 
 .lead,
 .section-note,
 .adset {
-  overflow-wrap: break-word;
+  overflow-wrap: break-word
 }
 
 .extension-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
+  align-items: start
 }
 
 .extension-grid .preview-frame {
-  grid-template-columns: minmax(0, 1fr) 108px;
+  grid-template-columns: minmax(0, 1fr) 108px
 }
 
 .preview-frame video {
@@ -32,7 +32,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: #111;
+  background: #111
 }
 
 .media-status {
@@ -42,7 +42,7 @@
   margin-top: 9px;
   color: var(--gris-oscuro);
   font-size: .76rem;
-  font-weight: 600;
+  font-weight: 600
 }
 
 .media-status::before {
@@ -50,52 +50,52 @@
   height: 8px;
   border-radius: 50%;
   background: #22a06b;
-  content: "";
+  content: ""
 }
 
 @media (max-width: 980px) {
   .lead,
   .section-note {
     width: 100%;
-    max-width: 100%;
+    max-width: 100%
   }
 }
 
 @media (max-width: 760px) {
   .extension-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr
   }
 }
 
 @media (max-width: 620px) {
   .report-hero {
     overflow: hidden;
-    padding: 36px 22px;
+    padding: 36px 22px
   }
 
   .report-shell {
     padding-right: 22px;
     padding-left: 22px;
-    overflow: hidden;
+    overflow: hidden
   }
 
   .cover-kicker {
     width: auto;
     max-width: 100%;
-    font-size: .84rem;
+    font-size: .84rem
   }
 
   h1 {
     font-size: 2.65rem;
     line-height: 1.05;
-    overflow-wrap: anywhere;
+    overflow-wrap: anywhere
   }
 
   .hero-metrics span {
-    max-width: 100%;
+    max-width: 100%
   }
 
   .extension-grid .preview-frame {
-    grid-template-columns: minmax(0, 1fr) 78px;
+    grid-template-columns: minmax(0, 1fr) 78px
   }
 }
