@@ -151,7 +151,7 @@ h1 {
 
 .category-nav::before {
   margin-bottom: 12px;
-  color: var(--yellow);
+  color:var(--accent-fg);
   content: 'Categorías';
   font-size: .76rem;
   font-weight: 700
@@ -176,7 +176,7 @@ h1 {
 
 .category-nav a:hover,
 .category-nav a:focus-visible {
-  color: var(--yellow)
+  color:var(--accent-fg)
 }
 
 .category-nav span {
