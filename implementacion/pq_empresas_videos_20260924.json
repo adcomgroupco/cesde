@@ -1,0 +1,139 @@
+{
+  "generated_at": "2026-09-24T14:23:48.676643+00:00",
+  "execute": true,
+  "date_label": "24/09",
+  "media_root": "C:\\Users\\danie\\Downloads\\CESDE",
+  "planned_ads": [
+    {
+      "ad_name": "Asesor Comercial Video_24/09",
+      "program": "Asesor Comercial y de Servicios",
+      "campaign": "2. PQ - 26 - MED - Técnico laboral como Asesor Comercial y de Servicios_Oficial",
+      "adset": "PQ - Técnico laboral como Asesor Comercial y de Servicios",
+      "form_id": "931818156286782",
+      "body": "🛍️ Aprende a asesorar, negociar y crear experiencias memorables para tus clientes 🤝. Con apoyo económico y práctica real en grandes empresas, ¡tu talento puede abrirte miles de puertas! 🚀",
+      "title": "¡Postúlate ahora!",
+      "feed_video": "C:\\Users\\danie\\Downloads\\CESDE\\OneDrive_2026-09-24\\Técnico Laboral como Asesor Comercial y de Servicios\\ASESOR_COMERCIAL_PAUTAmp4.mp4",
+      "vertical_video": "C:\\Users\\danie\\Downloads\\CESDE\\OneDrive_2026-09-24\\Técnico Laboral como Asesor Comercial y de Servicios\\ASESOR_COMERCIAL_VERTICALmp4.mp4",
+      "status": "ACTIVE"
+    },
+    {
+      "ad_name": "Alimentos y Bebidas Video_24/09",
+      "program": "Servicios de Alimentos y Bebidas",
+      "campaign": "4. PQ - 26 - MED - Técnico Laboral en Servicios de Alimentos & Bebidas en Medellín_Oficial",
+      "adset": "PQ - Técnico Laboral en Servicios de Alimentos & Bebidas en Medellín",
+      "form_id": "1043984868063611",
+      "body": "Convierte tu interés por los alimentos y bebidas en una oportunidad de formación con apoyo económico.",
+      "title": "Postúlate ahora",
+      "feed_video": "C:\\Users\\danie\\Downloads\\CESDE\\OneDrive_2026-09-24 (1)\\Técnico Laboral en Servicios de Alimentos y Bebidas\\PAUTA.mp4",
+      "vertical_video": "C:\\Users\\danie\\Downloads\\CESDE\\OneDrive_2026-09-24 (1)\\Técnico Laboral en Servicios de Alimentos y Bebidas\\KIT_ALIMENTOS_BEBIDAS.mp4",
+      "status": "ACTIVE"
+    }
+  ],
+  "uploaded_assets": {
+    "6150b779173be46acf69198c7b3e09ade9e01615a8cc5c418e943bade6e47f8f": {
+      "asset_id": "1433823495346997",
+      "action": "reused_checkpoint"
+    },
+    "d537377e03cc17bf09901dd5872d4c30bdd9d26dde87426d03de060929f65ee2": {
+      "asset_id": "2023800428277303",
+      "action": "reused_checkpoint"
+    },
+    "b0f13bd39c0fe0646cd691c899023d5af00650135df110159b6484ea0affe2b3": {
+      "asset_id": "4501606809985895",
+      "action": "reused_checkpoint"
+    },
+    "cae93db5b54160bb52c94a57dfbeb796ac71b92ee493f5407e105093eaadb6d3": {
+      "asset_id": "1748296583073432",
+      "action": "reused_checkpoint"
+    }
+  },
+  "results": [
+    {
+      "action": "creative_corrected",
+      "creative_action": "created",
+      "creative_id": "1654878202700339",
+      "ad_id": "120249254231180243",
+      "ad_name": "Asesor Comercial Video_24/09",
+      "adset": "PQ - Técnico laboral como Asesor Comercial y de Servicios"
+    },
+    {
+      "action": "creative_corrected",
+      "creative_action": "created",
+      "creative_id": "1710781547713669",
+      "ad_id": "120249254233810243",
+      "ad_name": "Alimentos y Bebidas Video_24/09",
+      "adset": "PQ - Técnico Laboral en Servicios de Alimentos & Bebidas en Medellín"
+    }
+  ],
+  "audit": [
+    {
+      "adset": "PQ - Técnico laboral como Asesor Comercial y de Servicios",
+      "ad_id": "120249254231180243",
+      "ad_name": "Asesor Comercial Video_24/09",
+      "effective_status": "IN_PROCESS",
+      "form_id": "931818156286782",
+      "checks": {
+        "configured_active": true,
+        "effective_status_observed": "IN_PROCESS",
+        "effective_status_accepted": true,
+        "form": true,
+        "media_format": true,
+        "paired_assets": true,
+        "placement_rules": true,
+        "no_multi_advertiser": true
+      },
+      "ok": true
+    },
+    {
+      "adset": "PQ - Técnico Laboral en Servicios de Alimentos & Bebidas en Medellín",
+      "ad_id": "120249254233810243",
+      "ad_name": "Alimentos y Bebidas Video_24/09",
+      "effective_status": "IN_PROCESS",
+      "form_id": "1043984868063611",
+      "checks": {
+        "configured_active": true,
+        "effective_status_observed": "IN_PROCESS",
+        "effective_status_accepted": true,
+        "form": true,
+        "media_format": true,
+        "paired_assets": true,
+        "placement_rules": true,
+        "no_multi_advertiser": true
+      },
+      "ok": true
+    }
+  ],
+  "audit_ok": true,
+  "checkpoint": {
+    "operation_id": "cesde-empresas-videos-20260924",
+    "path": "C:\\Users\\danie\\Documents\\Adcom\\Media bridge Adcom\\data\\cache\\meta_operations\\cesde-empresas-videos-20260924.json",
+    "completed_steps": 10,
+    "updated_at": "2026-09-24T14:24:14.493855+00:00"
+  },
+  "api": {
+    "requests": 14,
+    "successful_requests": 14,
+    "rate_limits": 0,
+    "transport_retries": 0,
+    "server_retries": 0,
+    "proactive_waits": 0,
+    "slept_seconds": 0.0,
+    "last_usage": {
+      "app": {},
+      "ad_account": {},
+      "business": {
+        "236065353543774": [
+          {
+            "type": "ads_management",
+            "call_count": 2,
+            "total_cputime": 5,
+            "total_time": 22,
+            "estimated_time_to_regain_access": 0,
+            "ads_api_access_tier": "development_access"
+          }
+        ]
+      },
+      "max_percentage": 22.0
+    }
+  }
+}

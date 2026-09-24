@@ -10,6 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/reporte-tecper.css">
   <link rel="stylesheet" href="../assets/css/reporte-pq.css">
+  <style>
+    .preview-frame video { width:100%; height:100%; object-fit:cover; display:block; background:#e8e8e8 }
+    .feed-video { aspect-ratio:4/5 }
+    .video-card .preview-frame { grid-template-columns:minmax(0, 1fr) 86px }
+  </style>
 </head>
 <body>
   <section class="report-hero compact">
@@ -19,9 +24,9 @@
         <h1>Empresas &middot; Septiembre</h1>
         <p class="lead">Vista de las piezas implementadas para los programas de formaci&oacute;n con empresas en Medell&iacute;n. Cada pareja de formatos se muestra una sola vez.</p>
         <div class="hero-metrics">
-          <span><strong>4</strong> piezas &uacute;nicas</span>
+          <span><strong>6</strong> piezas &uacute;nicas</span>
           <span><strong>4</strong> programas</span>
-          <span><strong>6</strong> anuncios configurados</span>
+          <span><strong>8</strong> anuncios configurados</span>
         </div>
       </div>
     </div>
@@ -59,42 +64,86 @@
         <div class="program-head">
           <div>
             <h2 class="program-title">Alimentos y bebidas</h2>
-            <p class="source-note">Una muestra creativa por programa.</p>
+            <p class="source-note">Una pieza est&aacute;tica y una pieza en video.</p>
           </div>
-          <div class="program-meta"><span class="tag light">1 pieza</span><span class="tag">Medell&iacute;n</span></div>
+          <div class="program-meta"><span class="tag light">2 piezas</span><span class="tag">Medell&iacute;n</span></div>
         </div>
-        <div class="ads-grid"><article class="ad-card">
-          <div class="preview-frame">
-            <div class="post-preview"><img src="../assets/img/reports/empresas-septiembre-20260901/alimentos-post.jpg" alt="Publicaci&oacute;n de Alimentos y bebidas 01/09"></div>
-            <div class="story-preview"><img src="../assets/img/reports/empresas-septiembre-20260901/alimentos-story.jpg" alt="Historia de Alimentos y bebidas 01/09"></div>
-          </div>
-          <div class="ad-info">
-            <div class="ad-name">Alimentos y bebidas_01/09</div>
-            <div class="adset">Programa: T&eacute;cnico Laboral en Servicios de Alimentos y Bebidas</div>
-            <span class="variant">Publicaci&oacute;n + historia</span>
-          </div>
-        </article></div>
+        <div class="ads-grid">
+          <article class="ad-card">
+            <div class="preview-frame">
+              <div class="post-preview"><img src="../assets/img/reports/empresas-septiembre-20260901/alimentos-post.jpg" alt="Publicaci&oacute;n de Alimentos y bebidas 01/09"></div>
+              <div class="story-preview"><img src="../assets/img/reports/empresas-septiembre-20260901/alimentos-story.jpg" alt="Historia de Alimentos y bebidas 01/09"></div>
+            </div>
+            <div class="ad-info">
+              <div class="ad-name">Alimentos y bebidas_01/09</div>
+              <div class="adset">Programa: T&eacute;cnico Laboral en Servicios de Alimentos y Bebidas</div>
+              <span class="variant">Publicaci&oacute;n + historia</span>
+            </div>
+          </article>
+
+          <article class="ad-card video-card">
+            <div class="preview-frame">
+              <div class="post-preview feed-video">
+                <video controls muted playsinline preload="metadata">
+                  <source src="../assets/img/reports/empresas-septiembre-20260924/alimentos-feed.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="story-preview">
+                <video controls muted playsinline preload="metadata">
+                  <source src="../assets/img/reports/empresas-septiembre-20260924/alimentos-story.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="ad-info">
+              <div class="ad-name">Alimentos y Bebidas Video_24/09</div>
+              <div class="adset">Programa: T&eacute;cnico Laboral en Servicios de Alimentos y Bebidas</div>
+              <span class="variant">Video 4:5 + vertical</span>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="program-section" id="comercial">
         <div class="program-head">
           <div>
             <h2 class="program-title">Asesor comercial</h2>
-            <p class="source-note">Una muestra creativa por programa.</p>
+            <p class="source-note">Una pieza est&aacute;tica y una pieza en video.</p>
           </div>
-          <div class="program-meta"><span class="tag light">1 pieza</span><span class="tag">Medell&iacute;n</span></div>
+          <div class="program-meta"><span class="tag light">2 piezas</span><span class="tag">Medell&iacute;n</span></div>
         </div>
-        <div class="ads-grid"><article class="ad-card">
-          <div class="preview-frame">
-            <div class="post-preview"><img src="../assets/img/reports/empresas-septiembre-20260901/comercial-post.jpg" alt="Publicaci&oacute;n de Asesor comercial 01/09"></div>
-            <div class="story-preview"><img src="../assets/img/reports/empresas-septiembre-20260901/comercial-story.jpg" alt="Historia de Asesor comercial 01/09"></div>
-          </div>
-          <div class="ad-info">
-            <div class="ad-name">Asesor comercial_01/09</div>
-            <div class="adset">Programa: T&eacute;cnico Laboral como Asesor Comercial y de Servicios</div>
-            <span class="variant">Publicaci&oacute;n + historia</span>
-          </div>
-        </article></div>
+        <div class="ads-grid">
+          <article class="ad-card">
+            <div class="preview-frame">
+              <div class="post-preview"><img src="../assets/img/reports/empresas-septiembre-20260901/comercial-post.jpg" alt="Publicaci&oacute;n de Asesor comercial 01/09"></div>
+              <div class="story-preview"><img src="../assets/img/reports/empresas-septiembre-20260901/comercial-story.jpg" alt="Historia de Asesor comercial 01/09"></div>
+            </div>
+            <div class="ad-info">
+              <div class="ad-name">Asesor comercial_01/09</div>
+              <div class="adset">Programa: T&eacute;cnico Laboral como Asesor Comercial y de Servicios</div>
+              <span class="variant">Publicaci&oacute;n + historia</span>
+            </div>
+          </article>
+
+          <article class="ad-card video-card">
+            <div class="preview-frame">
+              <div class="post-preview feed-video">
+                <video controls muted playsinline preload="metadata">
+                  <source src="../assets/img/reports/empresas-septiembre-20260924/asesor-comercial-feed.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="story-preview">
+                <video controls muted playsinline preload="metadata">
+                  <source src="../assets/img/reports/empresas-septiembre-20260924/asesor-comercial-story.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="ad-info">
+              <div class="ad-name">Asesor Comercial Video_24/09</div>
+              <div class="adset">Programa: T&eacute;cnico Laboral como Asesor Comercial y de Servicios</div>
+              <span class="variant">Video 4:5 + vertical</span>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="program-section" id="logistica">
