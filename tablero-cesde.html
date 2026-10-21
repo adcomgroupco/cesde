@@ -223,7 +223,7 @@ tr.nv-det td{background:var(--gray-50);padding:10px 14px}
       </div>
       <div class="tscroll"><table><thead id="det-head"></thead><tbody id="det-body"></tbody></table></div>
       <div class="foot-note">
-        <b>Inversión y leads plataforma</b>: RESUMEN GENERAL. Las campañas de técnicos que no tienen formación en RESUMEN GENERAL (nombres "TECPERFMED / TECPERFBELL / TECPERFRIONE - …") se asignan a Técnicos con la sede del código y el programa del nombre de la campaña; llevan la marca <span class="nv nv-inf">por nombre</span>.
+        <b>Inversión y leads plataforma</b>: RESUMEN GENERAL. La inversión y los presupuestos meta van multiplicados por 1,4, como la fila "Total 1.4" de los CONSUMO. Las campañas de técnicos que no tienen formación en RESUMEN GENERAL (nombres "TECPERFMED / TECPERFBELL / TECPERFRIONE - …") se asignan a Técnicos con la sede del código y el programa del nombre de la campaña; llevan la marca <span class="nv nv-inf">por nombre</span>.
         <b>Leads CRM</b>: CRM_LEADS con fuente Facebook Ads, Google Adwords o TikTok Ads, por fecha de creación. <b>Oportunidades</b>: CRM_DEALS de esas mismas fuentes, en cualquier fase. <b>Matrículas</b>: CRM_DEALS en fase "Matrícula", por fecha de creación. El CRM empieza el 1 de enero de 2026.
         <b>Metas</b> (METAS, la escribe el script del forecast): técnicos por periodo, empresas por mes. Sin el botón de meta, cada meta entra en proporción a los días del rango que caen dentro de su periodo o mes; con el botón encendido se toma la meta completa del periodo vigente. <b>Cumpl. leads</b> compara leads de plataforma contra la meta de leads, como en los CONSUMO del cliente.
         <b>Evolución, metas mensuales</b>: MENSUAL (empresas, meta del mes; técnicos, meta del periodo repartida por días). Aplican con cualquier filtro.
@@ -249,6 +249,8 @@ const FUENTES_PAUTA = ['Facebook Ads', 'Google Adwords', 'TikTok Ads'];
 const fuenteDe = s => FUENTES_PAUTA.includes(s) ? 'Pauta' : (s === 'Tráfico Orgánico' || s === 'Redes Sociales') ? 'Orgánico' : 'Otras fuentes';
 const FORMS = ['Técnicos', 'Empresas', 'Sin homologar'];
 const GENERAL = 'Campaña General';
+// Toda inversión y todo presupuesto se muestran × 1,4 (como la fila "Total 1.4" de los CONSUMO del cliente)
+const FACTOR_INV = 1.4;
 const SEDE_COD = {MED: 'Medellín', BELL: 'Bello', RIONE: 'Rionegro'};
 let META_TOTAL = false, META_PER = '';
 const MESES = ['','ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
@@ -307,7 +309,7 @@ const csv = (url, ok, err) => Papa.parse(url, {download:true, header:false, skip
 csv(URL_RG, rows => {
   if(rows.length && /fecha/i.test(rows[0][0])) rows.shift();
   rows.forEach(x => { const d = iso(x[0]); if(!d) return;
-    const inv = num(x[2]), lp = num(x[3]); if(!inv && !lp) return;
+    const inv = num(x[2]) * FACTOR_INV, lp = num(x[3]); if(!inv && !lp) return;
     let form = String(x[5]||'').trim(), sede = x[6], prog = String(x[7]||'').trim(), inf = false;
     if(!form){ const g = inferir(x[1]);
       if(g){ form = 'Técnicos'; sede = g.sede; prog = g.prog; inf = true } else { form = 'Sin homologar'; sede = ''; prog = String(x[1]||'').trim() } }
@@ -317,14 +319,14 @@ csv(URL_RG, rows => {
 csv(URL_META, rows => {
   if(rows.length && /formaci/i.test(rows[0][0])) rows.shift();
   METAS = rows.map(x => ({ form: String(x[0]||'').trim(), sede: sedeK(x[1]), prog: String(x[2]||'').trim(), medio: medioDe(x[3]),
-    ppto: num(x[4]), lm: num(x[5]), mm: num(x[7]), per: String(x[8]||'').trim(), ini: iso(x[9]), fin: iso(x[10]) }))
+    ppto: num(x[4]) * FACTOR_INV, lm: num(x[5]), mm: num(x[7]), per: String(x[8]||'').trim(), ini: iso(x[9]), fin: iso(x[10]) }))
     .filter(m => m.ini && m.fin && m.prog);
   // fechas de cada periodo (las de técnicos son las de la pestaña Periodos del forecast)
   METAS.filter(m => m.form === 'Técnicos').forEach(m => { PERIODOS[m.per] = [m.ini, m.fin] });
   done() }, () => fail('No se pudo leer METAS'));
 csv(URL_MENS, rows => {
   MENS = rows.slice(1).map(x => ({ mes: iso(x[1]).slice(0,7), form: String(x[3]||'').trim(), sede: sedeK(x[4]), prog: String(x[5]||'').trim(),
-    medio: medioDe(x[6]), ppto: num(x[9]), lm: num(x[10]), mm: num(x[11]) })).filter(m => m.mes);
+    medio: medioDe(x[6]), ppto: num(x[9]) * FACTOR_INV, lm: num(x[10]), mm: num(x[11]) })).filter(m => m.mes);
   done() }, () => done());
 // CRM: fecha | formación | fuente | programa | sede | (fase) | conteo
 const crm = (rows, deals) => rows.slice(1).forEach(x => { const d = iso(x[0]); if(!d) return;
