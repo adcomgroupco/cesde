@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resultados de las creatividades de Empresas del 1 al 25 de octubre de 2026.">
+  <title>CESDE Empresas | Creatividades de octubre 2026</title>
+  <link rel="stylesheet" href="../assets/css/adcom-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/reporte-tecper.css">
+  <link rel="stylesheet" href="../assets/css/reporte-medios.css">
+  <link rel="stylesheet" href="../assets/css/reporte-performance.css">
+  <link rel="stylesheet" href="../assets/css/revision-pq-agosto.css">
+  <style>
+    .report-hero.compact { min-height: 0; padding-top: 68px; padding-bottom: 68px; }
+    .hero-main h1 { font-size: 3.4rem; line-height: 1.08; }
+    .report-shell section { margin-bottom: 54px; }
+    .report-shell section:last-child { margin-bottom: 0; }
+    .reading { max-width: 850px; font-size: 1rem; line-height: 1.7; }
+    .reading + .reading { margin-top: 14px; }
+    .lead-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+    .lead-grid > div { border-top: 3px solid var(--amarillo); padding-top: 14px; }
+    .lead-grid strong { display: block; color: var(--negro); font-size: 1.4rem; line-height: 1.2; }
+    .lead-grid span { display: block; margin-top: 6px; color: var(--gris-oscuro); font-size: .86rem; }
+    .period-bars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 24px; }
+    .period-bars > div { min-width: 0; }
+    .period-bars .label { display: flex; justify-content: space-between; gap: 8px; font-size: .88rem; font-weight: 600; }
+    .period-bars .track { height: 15px; margin: 8px 0; background: var(--gris-claro); border: 1px solid var(--gris-borde); }
+    .period-bars .fill { display: block; height: 100%; background: var(--amarillo); }
+    .period-bars .late { background: #cf1565; }
+    .period-bars p { font-size: .82rem; color: var(--gris-medio); }
+    .decision { display: inline-block; font-weight: 700; color: #176445; }
+    .decision.review { color: #87551b; }
+    .decision.retire { color: #9d2855; }
+    .program-table { min-width: 1160px; table-layout: fixed; }
+    .program-table th:nth-child(1) { width: 25%; }
+    .program-table th:nth-child(2) { width: 8%; }
+    .program-table th:nth-child(3) { width: 13%; }
+    .program-table th:nth-child(4) { width: 28%; }
+    .program-table th:nth-child(5) { width: 26%; }
+    .program-table td:first-child { font-weight: 600; color: var(--negro); display: flex; align-items: center; gap: 11px; }
+    .program-name { min-width: 0; overflow-wrap: break-word; }
+    .program-name small { display: block; margin-top: 3px; color: var(--gris-medio); font-size: .74rem; font-weight: 500; }
+    .program-preview { flex: 0 0 96px; display: block; width: 96px; height: 108px; border: 1px solid var(--gris-borde); background: var(--gris-claro); overflow: hidden; }
+    .program-preview img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .program-preview:focus-visible { outline: 3px solid var(--amarillo); outline-offset: 2px; }
+    .program-table th:nth-child(2), .program-table th:nth-child(3),
+    .program-table td:nth-child(2), .program-table td:nth-child(3) {
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .program-table td:first-child, .program-table td:nth-child(4), .program-table td:nth-child(5) { overflow-wrap: break-word; }
+    .decision-list { max-width: 950px; border-top: 1px solid var(--gris-borde); margin-top: 20px; }
+    .decision-list p { padding: 13px 0; border-bottom: 1px solid var(--gris-borde); font-size: .9rem; line-height: 1.55; }
+    .method { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--gris-borde); font-size: .82rem; color: var(--gris-medio); line-height: 1.65; }
+    .method p + p { margin-top: 8px; }
+    @media (max-width: 720px) {
+      .report-hero.compact { padding: 42px 22px; }
+      .hero-main h1 { font-size: 2.2rem; }
+      .report-shell { padding: 36px 22px 70px; }
+      .lead-grid, .period-bars { grid-template-columns: 1fr; }
+      .program-table-wrap { border: 0; overflow: visible; background: transparent; }
+      .program-table { display: block; min-width: 0; }
+      .program-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+      .program-table tbody, .program-table tr, .program-table td { display: block; width: 100%; }
+      .program-table tr { padding: 16px 0; border-top: 1px solid var(--gris-borde); }
+      .program-table tr:last-child { border-bottom: 1px solid var(--gris-borde); }
+      .program-table tr:nth-child(even) td { background: transparent; }
+      .program-table td { padding: 4px 0; border: 0; }
+      .program-table td:first-child { padding-bottom: 8px; font-size: .98rem; }
+      .program-preview { flex-basis: 108px; width: 108px; height: 108px; }
+      .program-table td:nth-child(2), .program-table td:nth-child(3) { display: flex; justify-content: space-between; gap: 12px; text-align: right; }
+      .program-table td:nth-child(4), .program-table td:nth-child(5) { margin-top: 8px; line-height: 1.55; }
+      .program-table td:nth-child(2)::before { content: "Leads"; }
+      .program-table td:nth-child(3)::before { content: "Costo por lead"; }
+      .program-table td:nth-child(4)::before { content: "Contenido que respondi\00f3"; }
+      .program-table td:nth-child(5)::before { content: "Decisi\00f3n"; }
+      .program-table td::before { color: var(--gris-medio); font-size: .75rem; font-weight: 700; }
+      .program-table td:nth-child(4)::before, .program-table td:nth-child(5)::before { display: block; margin-bottom: 3px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="report-hero compact">
+    <div class="hero-grid single">
+      <div class="hero-main">
+        <span class="cover-kicker">CESDE &middot; Empresas &middot; 1 al 25 de octubre de 2026</span>
+        <h1>Las piezas nuevas suman volumen; el costo exige una lectura por programa</h1>
+        <p class="lead">Balance de las &uacute;ltimas creatividades y de todos los anuncios de Empresas con entrega en Meta durante octubre. Corte hasta el &uacute;ltimo d&iacute;a completo.</p>
+        <div class="hero-metrics">
+          <span><strong>5.664</strong> leads atribuidos</span>
+          <span><strong>$4.903</strong> costo promedio por lead</span>
+          <span><strong>1.267</strong> leads de piezas nuevas</span>
+          <span><strong>12</strong> iniciativas con entrega</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="report-shell">
+    <section aria-labelledby="resumen">
+      <div class="section-top"><div class="slide-header"><h2 id="resumen">Lectura ejecutiva</h2></div></div>
+      <p class="reading">La pauta de Empresas gener&oacute; <strong>5.664 leads atribuidos en Meta</strong> con <strong>$27,77 millones</strong> de inversi&oacute;n. Las piezas incorporadas en octubre aportaron <strong>1.267 leads</strong>, el 22,4% del total, usando el 28,7% de la inversi&oacute;n. Su costo agregado fue de <strong>$6.281 por lead</strong>, frente a $4.506 de las piezas anteriores; esta diferencia describe una mezcla de programas distinta, no un experimento controlado.</p>
+      <p class="reading">Dentro de los programas que s&iacute; tienen referencia, <strong>Software y Soporte de Sistemas mejoraron su costo por lead</strong> frente a los anuncios previos del mismo programa. Administrativo Bello entreg&oacute; volumen importante, aunque a un costo superior al promedio general. Suministros y Almac&eacute;n reci&eacute;n empez&oacute; a circular; Talento Humano estuvo casi todo el mes sin entrega y no permite concluir.</p>
+      <div class="lead-grid">
+        <div><strong>510 leads</strong><span>Software nuevo, $5.894 por lead</span></div>
+        <div><strong>277 leads</strong><span>Soporte nuevo, $5.419 por lead</span></div>
+        <div><strong>418 leads</strong><span>Administrativo Bello nuevo, $7.124 por lead</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="ritmo">
+      <div class="section-top"><div class="slide-header"><h2 id="ritmo">C&oacute;mo evolucion&oacute; el mes</h2></div></div>
+      <p class="reading">Del 1 al 12 de octubre hubo 153 leads diarios en promedio. Del 13 al 25 fueron 294 diarios. El aumento de volumen convivi&oacute; con una inversi&oacute;n diaria mucho mayor y un costo por lead que subi&oacute; de $4.150 a $5.264. Por eso, <strong>no se puede atribuir el salto de leads solamente a las piezas nuevas</strong>.</p>
+      <div class="period-bars" aria-label="Promedio diario de leads: 153 del 1 al 12 de octubre y 294 del 13 al 25 de octubre">
+        <div><div class="label"><span>1 al 12 de octubre</span><strong>153 por d&iacute;a</strong></div><div class="track"><span class="fill" style="width:52%"></span></div><p>1.836 leads &middot; $7,62 M &middot; $4.150 por lead</p></div>
+        <div><div class="label"><span>13 al 25 de octubre</span><strong>294 por d&iacute;a</strong></div><div class="track"><span class="fill late" style="width:100%"></span></div><p>3.828 leads &middot; $20,15 M &middot; $5.264 por lead</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="programas">
+      <div class="section-top"><div class="slide-header"><h2 id="programas">Decisiones por programa</h2></div><p class="section-note">Leads y costo promedio del programa completo. La decisi&oacute;n se refiere al contenido, no implica cambios autom&aacute;ticos en la pauta.</p></div>
+      <div class="table-wrap program-table-wrap"><table class="program-table"><thead><tr><th>Programa</th><th class="right">Leads</th><th class="right">Costo por lead</th><th>Contenido que respondi&oacute;</th><th>Decisi&oacute;n</th></tr></thead><tbody>
+        <tr><td><a class="program-preview" href="../assets/img/reports/empresas-septiembre-20260901/admin-post.jpg" target="_blank" rel="noopener" aria-label="Abrir pieza de Administrativo Medell&iacute;n"><img src="../assets/img/reports/empresas-septiembre-20260901/admin-post.jpg" alt="" loading="lazy"></a><span class="program-name">Administrativo &middot; Medell&iacute;n<small>Pieza de septiembre</small></span></td><td class="right">683</td><td class="right">$2.166</td><td>La pieza con EPM aport&oacute; 355 leads a $2.183 y la de septiembre, 311 a $2.141. Juntas explican casi todo el resultado.</td><td><span class="decision">Mantener ambas.</span> Nequi solo tiene 17 leads; el video de septiembre gast&oacute; muy poco para evaluarlo.</td></tr>
+        <tr><td><a class="program-preview" href="../assets/img/reports/empresas-septiembre-20260901/comercial-post.jpg" target="_blank" rel="noopener" aria-label="Abrir pieza de Asesor Comercial Medell&iacute;n"><img src="../assets/img/reports/empresas-septiembre-20260901/comercial-post.jpg" alt="" loading="lazy"></a><span class="program-name">Asesor Comercial &middot; Medell&iacute;n<small>Pieza de septiembre</small></span></td><td class="right">899</td><td class="right">$7.044</td><td>La imagen de septiembre logr&oacute; 409 leads a $6.453. El video con el mismo texto sum&oacute; 292 a $7.535.</td><td><span class="decision">Priorizar la imagen.</span> <span class="decision review">Revisar el video</span> con calidad de lead antes de reducirlo; las piezas de Emtelco y R&eacute;ditos tienen poco volumen.</td></tr>
+        <tr><td><a class="program-preview" href="../assets/img/reports/pq-agosto-20260731/logistica-post.jpg" target="_blank" rel="noopener" aria-label="Abrir pieza de Log&iacute;stica Medell&iacute;n"><img src="../assets/img/reports/pq-agosto-20260731/logistica-post.jpg" alt="" loading="lazy"></a><span class="program-name">Log&iacute;stica &middot; Medell&iacute;n<small>Pieza de julio</small></span></td><td class="right">502</td><td class="right">$4.254</td><td>La pareja de julio reuni&oacute; 434 leads a $4.145; la de septiembre, 55 a $5.107. El video de mediados de septiembre solo acumul&oacute; 13.</td><td><span class="decision">Mantener julio como base.</span> <span class="decision review">Despriorizar septiembre</span> hasta contar con una prueba m&aacute;s pareja.</td></tr>
+        <tr><td><a class="program-preview" href="../assets/img/reports/pq-agosto-20260731/alimentos-post.jpg" target="_blank" rel="noopener" aria-label="Abrir pieza de Alimentos y Bebidas Medell&iacute;n"><img src="../assets/img/reports/pq-agosto-20260731/alimentos-post.jpg" alt="" loading="lazy"></a><span class="program-name">Alimentos y Bebidas &middot; Medell&iacute;n<small>Pieza de julio</small></span></td><td class="right">563</td><td class="right">$3.783</td><td>La imagen de julio produjo 318 leads a $3.657; el video de septiembre aport&oacute; 159 a $4.265.</td><td><span class="decision">Mantener ambas, con prioridad en julio.</span> El video ampl&iacute;a volumen, pero debe justificar su mayor costo con calidad.</td></tr>
+        <tr><td><a class="program-preview" href="../assets/img/reports/empresas-octubre-20261026/software.jpg" target="_blank" rel="noopener" aria-label="Abrir pieza de Desarrollo de Software Medell&iacute;n"><img src="../assets/img/reports/empresas-octubre-20261026/software.jpg" alt="" loading="lazy"></a><span class="program-name">Desarrollo de Software &middot; Medell&iacute;n<small>Pieza de octubre</small></span></td><td class="right">778</td><td class="right">$6.286</td><td>Las piezas del 01/10 generaron 510 leads a $5.894, frente a 268 a $7.033 de piezas previas del programa.</td><td><span class="decision">Mantener las nuevas.</span> <span class="decision review">Despriorizar las anteriores</span> si la calidad en CRM es comparable.</td></tr>
+        <tr><td><a class="program-preview" href="../assets/img/reports/empresas-octubre-20261026/soporte.jpg" target="_blank" rel="noopener" aria-label="Abrir fotograma del video de Soporte de Sistemas Medell&iacute;n"><img src="../assets/img/reports/empresas-octubre-20261026/soporte.jpg" alt="" loading="lazy"></a><span class="program-name">Soporte de Sistemas &middot; Medell&iacute;n<small>Video de octubre</small></span></td><td class="right">409</td><td class="right">$7.010</td><td>El video nuevo produjo 277 leads a $5.419; la pieza anterior de R&eacute;ditos, 132 a $10.348 con $1,37 M invertidos.</td><td><span class="decision">Mantener el video.</span> <span class="decision retire">Candidata a retirar: pieza anterior</span>, tras comprobar que el CRM no muestre mejor calidad.</td></tr>
+        <tr><td><a class="program-preview" href="../assets/img/reports/empresas-octubre-20261026/bello.jpg" target="_blank" rel="noopener" aria-label="Abrir pieza de Administrativo Bello"><img src="../assets/img/reports/empresas-octubre-20261026/bello.jpg" alt="" loading="lazy"></a><span class="program-name">Administrativo &middot; Bello<small>Pieza de octubre</small></span></td><td class="right">418</td><td class="right">$7.124</td><td>La misma creatividad del 01/10 circul&oacute; en dos conjuntos y explica los 418 leads; no son dos conceptos distintos.</td><td><span class="decision review">Mantener como prueba.</span> Crear una variante m&aacute;s ligada al trabajo administrativo y comparar dentro de Bello.</td></tr>
+        <tr><td><a class="program-preview" href="../assets/img/reports/empresas-octubre-20261026/suministros-story.jpg" target="_blank" rel="noopener" aria-label="Abrir pieza de Suministros y Almac&eacute;n Rionegro"><img src="../assets/img/reports/empresas-octubre-20261026/suministros-story.jpg" alt="" loading="lazy"></a><span class="program-name">Suministros y Almac&eacute;n &middot; Rionegro<small>Pieza de octubre</small></span></td><td class="right">49</td><td class="right">$9.325</td><td>Una pieza vertical del 22/10, con apenas cuatro d&iacute;as completos de entrega en este corte.</td><td><span class="decision review">No descartar a&uacute;n.</span> Probar una pieza que muestre tareas del oficio y revisar el costo tras m&aacute;s d&iacute;as.</td></tr>
+        <tr><td><a class="program-preview" href="../assets/img/reports/empresas-octubre-20261026/talento.jpg" target="_blank" rel="noopener" aria-label="Abrir pieza de Talento Humano Medell&iacute;n"><img src="../assets/img/reports/empresas-octubre-20261026/talento.jpg" alt="" loading="lazy"></a><span class="program-name">Talento Humano y Riesgo Laboral &middot; Medell&iacute;n<small>Pieza de octubre</small></span></td><td class="right">74</td><td class="right">$2.206</td><td>El video anterior aport&oacute; 55 leads; las dos piezas del 01/10, 13 con solo $17 mil invertidos.</td><td><span class="decision review">Sin ganador nuevo.</span> La iniciativa est&aacute; apagada; no descartar ni escalar por una muestra tan peque&ntilde;a.</td></tr>
+      </tbody></table></div>
+      <p class="source-note">Fuera de los programas individuales, las Charlas Informativas aportaron 585 leads a $2.515 y la charla general, 567 a $2.604. WhatsApp registr&oacute; 137 acciones lead a $10.138; es un recorrido diferente y requiere revisar conversaciones &uacute;tiles, no solo el costo por acci&oacute;n.</p>
+    </section>
+
+    <section aria-labelledby="contenido">
+      <div class="section-top"><div class="slide-header"><h2 id="contenido">Qu&eacute; mensaje conviene conservar</h2></div></div>
+      <p class="reading">La combinaci&oacute;n de <strong>patrocinio empresarial o apoyo econ&oacute;mico, experiencia laboral y un programa identificable</strong> aparece en varias piezas que siguen generando leads: el reel de Charlas, la charla general, Administrativo, Log&iacute;stica y las nuevas de Software. En las charlas, el video que explica la posibilidad de estudiar mientras se gana experiencia fue el anuncio individual con mayor aporte: 523 leads. En Administrativo, la pieza de EPM y la de septiembre sostuvieron 666 leads juntas.</p>
+      <p class="reading">Esto <strong>no demuestra que una frase o un formato cause el resultado</strong>: las audiencias, la antig&uuml;edad y la inversi&oacute;n cambian entre anuncios. S&iacute; marca una direcci&oacute;n de producci&oacute;n: conservar la promesa de apoyo econ&oacute;mico, pero hacer m&aacute;s visible <em>qu&eacute; oficio se aprende y qu&eacute; har&aacute; la persona</em>. La pieza de Suministros, por ejemplo, ya menciona el programa en el texto, pero el mensaje visual principal comparte la misma promesa general que otras carreras; vale la pena probar un enfoque m&aacute;s espec&iacute;fico.</p>
+      <div class="decision-list">
+        <p><span class="decision">Mantener:</span> reel principal y charla general; Administrativo Medell&iacute;n (EPM y septiembre); Log&iacute;stica de julio; Alimentos de julio y su video; Software y Soporte nuevos.</p>
+        <p><span class="decision review">Ajustar o comparar:</span> Asesor Comercial en video frente a la imagen; Administrativo Bello y Suministros con mensajes del oficio; las piezas de septiembre de Log&iacute;stica frente a julio.</p>
+        <p><span class="decision retire">Retirar solo con validaci&oacute;n:</span> la pieza anterior de Soporte es la candidata m&aacute;s clara por su mayor costo con inversi&oacute;n relevante. Reel #3, video de Administrativo y piezas nuevas de Talento Humano no tienen muestra suficiente para llamarlas fallidas.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="motores">
+      <div class="section-top"><div class="slide-header"><h2 id="motores">Qu&eacute; sostuvo los resultados</h2></div></div>
+      <p class="reading">El volumen de octubre no dependi&oacute; solo de las piezas recientes. La entrevista corta de Charlas Informativas, la charla general de septiembre y la pieza de Asesor Comercial de septiembre aportaron juntas <strong>1.401 leads</strong>, casi una cuarta parte del total. Adem&aacute;s, las piezas anteriores de Administrativo Medell&iacute;n, Alimentos y Bebidas y Log&iacute;stica siguieron captando a costos competitivos.</p>
+      <div class="table-wrap"><table><thead><tr><th>Creatividad / programa</th><th>Antig&uuml;edad</th><th class="right">Leads</th><th class="right">Costo por lead</th><th>Lectura</th></tr></thead><tbody>
+        <tr><td>Entrevista corta &middot; Charlas Informativas</td><td>Junio</td><td class="right">523</td><td class="right">$2.508</td><td>Mayor volumen individual.</td></tr>
+        <tr><td>Charla general &middot; Empresas</td><td>Septiembre</td><td class="right">469</td><td class="right">$2.489</td><td>Volumen con costo bajo.</td></tr>
+        <tr><td>Asesor Comercial &middot; Medell&iacute;n</td><td>Septiembre</td><td class="right">409</td><td class="right">$6.453</td><td>Volumen alto, costo superior al promedio.</td></tr>
+        <tr><td>Administrativo EPM &middot; Medell&iacute;n</td><td>Agosto</td><td class="right">355</td><td class="right">$2.183</td><td>Una de las fuentes m&aacute;s eficientes.</td></tr>
+        <tr><td>Alimentos y Bebidas &middot; Medell&iacute;n</td><td>Julio</td><td class="right">318</td><td class="right">$3.657</td><td>Sigue sosteniendo resultados.</td></tr>
+        <tr><td>Administrativo &middot; Medell&iacute;n</td><td>Septiembre</td><td class="right">311</td><td class="right">$2.141</td><td>Buen costo y escala.</td></tr>
+      </tbody></table></div>
+      <p class="reading">No todas estas iniciativas persiguen exactamente el mismo recorrido de conversi&oacute;n. Sus costos sirven para entender la composici&oacute;n del mes, pero la decisi&oacute;n de reemplazar o escalar una pieza debe compararse dentro de su programa y contrastarse con la calidad de los contactos recibidos.</p>
+    </section>
+
+    <section aria-labelledby="siguientes">
+      <div class="section-top"><div class="slide-header"><h2 id="siguientes">Pr&oacute;xima lectura</h2></div></div>
+      <p class="reading">Mantener Software y Soporte como se&ntilde;ales favorables y revisar su calidad en CRM antes de ampliar inversi&oacute;n. En Bello, verificar cu&aacute;ntos de los 418 leads avanzaron para juzgar si su mayor costo se compensa. En Suministros, esperar m&aacute;s d&iacute;as y revisar el recorrido desde el clic hasta el contacto antes de concluir que la creatividad no funciona. Talento Humano necesita entrega real para evaluarse.</p>
+      <div class="method"><p><strong>Fuente y alcance.</strong> Meta Ads, iniciativas de Empresas con gasto entre el 1 y el 25 de octubre de 2026, zona horaria de la cuenta. Corte consultado el 26/10. Se cuentan las acciones de tipo lead atribuidas por Meta, no matr&iacute;culas ni leads confirmados en CRM. El 26/10 se excluye por estar incompleto.</p><p><strong>M&eacute;todo.</strong> Inversi&oacute;n y leads se suman por anuncio; el costo por lead es inversi&oacute;n dividida entre leads. Las piezas nuevas se identifican por su nombre y fecha de publicaci&oacute;n: 01/10, 15/10 y 22/10. Las comparaciones entre anuncios previos y nuevos son descriptivas: pueden diferir en fechas, audiencias, presupuesto y mensaje. Cuando una publicaci&oacute;n y una historia comparten anuncio, estos datos no separan el resultado de cada formato. Miniaturas obtenidas de las creatividades de Meta y conservadas en este repositorio.</p></div>
+    </section>
+  </main>
+</body>
+</html>
