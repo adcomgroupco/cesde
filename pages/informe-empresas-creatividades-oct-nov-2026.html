@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/>
+<title>CESDE Empresas | Creatividades, octubre y noviembre de 2026</title>
+<link href="data:," rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root { --ink:#050505; --body:#41413e; --muted:#656560; --line:#d9d9d5; --ground:#f4f4f1; --paper:#fcfcfa; --accent:#ffd400; --magenta:#c81765; --green:#176445 }
+    * { box-sizing:border-box }
+    html { scroll-behavior:smooth }
+    body { margin:0; color:var(--body); background:var(--paper); font-family:Poppins,Arial,sans-serif; line-height:1.65 }
+    h1,h2,h3,strong { color:var(--ink) }
+    h1,h2,h3,p { margin:0 }
+    a { color:inherit }
+    .hero { background:var(--ground); padding:64px 32px 58px }
+    .hero-inner,main { max-width:1160px; margin:0 auto }
+    .brand-mark { display:block; width:116px; height:auto; margin-bottom:24px }
+    .eyebrow { display:block; color:var(--muted); font-size:.76rem; font-weight:700; text-transform:uppercase; margin-bottom:20px }
+    h1 { font-size:3.35rem; line-height:1.13; max-width:900px }
+    .hero p { font-size:1rem; max-width:820px; margin-top:18px }
+    .summary { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px }
+    .summary span { border:1px solid var(--line); background:var(--paper); padding:10px 13px; font-size:.79rem; border-radius:6px }
+    .summary strong { font-size:1.04rem; margin-right:5px }
+    main { padding:42px 32px 80px }
+    section { margin-bottom:64px; scroll-margin-top:16px }
+    h2 { font-size:1.65rem; line-height:1.25; border-bottom:2px solid var(--accent); padding-bottom:13px; margin-bottom:20px }
+    h3 { font-size:1.12rem; line-height:1.35 }
+    p + p { margin-top:12px }
+    .lede { max-width:940px }
+    .note { font-size:.78rem; color:var(--muted); line-height:1.6 }
+    .periods { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:24px 0 }
+    .period { border-top:3px solid var(--accent); padding-top:12px }
+    .period:nth-child(2) { border-color:var(--magenta) }
+    .period strong { display:block; font-size:1.45rem; line-height:1.2 }
+    .period span { display:block; margin-top:6px; font-size:.84rem }
+    .period-track,.angle-track,.bar-track { overflow:hidden; background:#e7e6e1 }
+    .period-track { height:13px; margin:12px 0 8px }
+    .period-track i,.angle-track i,.bar-track i { display:block; height:100%; background:var(--accent) }
+    .period:nth-child(2) .period-track i { background:var(--magenta) }
+    .mix { margin:27px 0 24px }
+    .mix h3,.chart-head h3 { font-size:.95rem; margin-bottom:6px }
+    .mix-bar { display:flex; width:100%; height:20px; margin:10px 0 12px; overflow:hidden }
+    .mix-bar span:nth-child(1) { width:81.96%; background:#171717 }
+    .mix-bar span:nth-child(2) { width:9.39%; background:var(--magenta) }
+    .mix-bar span:nth-child(3) { width:8.65%; background:var(--accent) }
+    .mix-legend,.chart-legend { display:flex; flex-wrap:wrap; gap:8px 20px; font-size:.77rem; color:var(--body) }
+    .mix-legend span,.chart-legend span { display:inline-flex; align-items:center; gap:7px }
+    .swatch { display:inline-block; width:12px; height:12px; flex:none; background:#171717 }
+    .swatch.magenta { background:var(--magenta) }
+    .swatch.yellow { background:var(--accent) }
+    .swatch.grey { background:#858580 }
+    .chart-head { margin:28px 0 14px }
+    .chart-head p { color:var(--muted); font-size:.8rem }
+    .angle-list { border-top:1px solid var(--ink); margin:18px 0 24px }
+    .angle-row { display:grid; grid-template-columns:minmax(190px,240px) minmax(0,1fr) 150px; align-items:center; gap:18px; padding:13px 0; border-bottom:1px solid var(--line) }
+    .angle-row strong { font-size:.82rem; line-height:1.4 }
+    .angle-track { height:14px }
+    .angle-row:nth-child(2) .angle-track i { background:#20201e }
+    .angle-row:nth-child(3) .angle-track i { background:var(--magenta) }
+    .angle-row:nth-child(4) .angle-track i { background:#438d7c }
+    .angle-value { text-align:right; font-size:.78rem; white-space:nowrap; font-variant-numeric:tabular-nums }
+    .angle-value strong { display:block; font-size:.95rem }
+    .cpl-chart { border-top:1px solid var(--ink); margin:18px 0 20px }
+    .cpl-row { display:grid; grid-template-columns:minmax(180px,240px) minmax(0,1fr); gap:24px; align-items:center; padding:12px 0; border-bottom:1px solid var(--line) }
+    .cpl-name { font-size:.8rem; font-weight:600; color:var(--ink); line-height:1.4 }
+    .bar-pair { display:grid; gap:6px }
+    .bar-line { display:grid; grid-template-columns:30px minmax(0,1fr) 72px; gap:9px; align-items:center; font-size:.72rem; color:var(--muted); font-variant-numeric:tabular-nums }
+    .bar-line b { color:var(--ink); text-align:right; font-weight:600; white-space:nowrap }
+    .bar-track { height:10px }
+    .bar-line.oct .bar-track i { background:#858580 }
+    .bar-line.nov .bar-track i { background:var(--magenta) }
+    .table-wrap { width:100%; overflow-x:auto; margin:20px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--line) }
+    table { width:100%; border-collapse:collapse; min-width:760px }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; font-size:.79rem }
+    th { color:var(--muted); font-size:.72rem; font-weight:700 }
+    th.num,td.num { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums }
+    tr:last-child td { border-bottom:0 }
+    .program { display:grid; grid-template-columns:150px minmax(0,1fr); gap:22px; border-bottom:1px solid var(--line); padding:25px 0 }
+    .program:first-of-type { border-top:1px solid var(--line) }
+    .thumb { display:block; width:150px; height:175px; background:#eee; border:1px solid var(--line); overflow:hidden }
+    .thumb img { width:100%; height:100%; object-fit:contain; display:block }
+    .program-body { min-width:0 }
+    .program-body h3 { margin-bottom:5px }
+    .metrics { color:var(--muted); font-size:.78rem; font-weight:600; margin-bottom:10px; font-variant-numeric:tabular-nums }
+    .program-body p { font-size:.86rem; line-height:1.65 }
+    .decision { color:var(--green); font-weight:700 }
+    .watch { color:#87551b; font-weight:700 }
+    .general-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin-top:22px }
+    .general-item { min-width:0; border-top:3px solid var(--accent); padding-top:15px }
+    .general-item .thumb { margin-bottom:14px; width:100%; max-width:185px; height:175px }
+    .general-item p { font-size:.83rem; margin-top:10px }
+    .general-item .change { display:inline-block; margin-top:12px; color:var(--ink); font-size:.82rem; font-weight:700; border-bottom:3px solid var(--accent) }
+    .decision-band { background:#151515; color:#f4f4f1; border-top:4px solid var(--accent); padding:25px 28px; margin-top:22px }
+    .decision-band h3 { color:#fff; font-size:1.05rem; margin-bottom:14px }
+    .decision-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px }
+    .decision-grid div { border-top:1px solid #777; padding-top:11px }
+    .decision-grid strong { display:block; color:var(--accent); font-size:.82rem; margin-bottom:5px }
+    .decision-grid p { color:#ededeb; font-size:.79rem; line-height:1.6 }
+    .method { border-top:1px solid var(--line); padding-top:20px }
+    .nav { display:flex; flex-wrap:wrap; gap:9px 18px; margin-top:22px; font-size:.76rem; font-weight:600 }
+    .nav a { text-decoration-color:var(--magenta); text-underline-offset:4px }
+    @media(max-width:700px) {
+      .hero { padding:42px 20px }
+      h1 { font-size:2.15rem }
+      main { padding:34px 20px 60px }
+      h2 { font-size:1.4rem }
+      .periods,.general-grid { grid-template-columns:1fr }
+      .angle-row { grid-template-columns:minmax(0,1fr) auto; gap:8px 12px }
+      .angle-row strong { grid-column:1 / -1 }
+      .angle-value strong { display:block }
+      .cpl-row { grid-template-columns:1fr; gap:8px }
+      .bar-line { grid-template-columns:30px minmax(0,1fr) 65px }
+      .decision-grid { grid-template-columns:1fr; gap:15px }
+      .decision-band { padding:22px 20px }
+      .program { grid-template-columns:96px minmax(0,1fr); gap:0 14px }
+      .program .thumb { grid-column:1; grid-row:1 / 3; width:96px; height:120px }
+      .program-body { display:contents }
+      .program-body h3 { grid-column:2; grid-row:1 }
+      .program-body .metrics { grid-column:2; grid-row:2 }
+      .program-body p { grid-column:1 / -1; margin-top:10px }
+      .program-body p { font-size:.83rem }
+      .program-body h3 { overflow-wrap:normal }
+    }
+  </style>
+</head>
+<body>
+<header class="hero">
+<div class="hero-inner">
+<img alt="CESDE" class="brand-mark" src="../assets/img/brand/cesde-magenta.webp"/>
+<span class="eyebrow">CESDE · Empresas · 1 de octubre al 8 de noviembre de 2026</span>
+<h1>Creatividades de Empresas</h1>
+<p>Qué mensajes sostuvieron los resultados, cómo cambió el costo y qué conviene mantener o volver a probar en cada programa.</p>
+<div class="summary">
+<span><strong>9.927</strong> leads de formularios</span>
+<span><strong>$4.626</strong> costo por lead</span>
+<span><strong>11</strong> programas con entrega</span>
+<span><strong>591</strong> conversaciones por WhatsApp</span>
+</div>
+<nav aria-label="Secciones del informe" class="nav"><a href="#balance">Balance</a><a href="#angulos">Ángulos</a><a href="#programas">Por programa</a><a href="#generales">Generales y charlas</a><a href="#metodo">Fuente y límites</a></nav>
+</div>
+</header>
+<main>
+<section id="balance">
+<h2>Lectura ejecutiva</h2>
+<p class="lede">Las campañas con formulario generaron <strong>9.927 leads atribuidos por Meta</strong> con una inversión de <strong>$45,92 millones</strong> en el periodo. El volumen diario subió en los primeros ocho días de noviembre y el costo promedio bajó; no obstante, el resultado es una mezcla de programas, anuncios y presupuestos diferentes.</p>
+<div class="periods">
+<div class="period"><strong>238 leads por día</strong><div aria-hidden="true" class="period-track"><i style="width:74.93%"></i></div><span>Octubre completo: 7.384 leads · $35,38 M · $4.791 por lead</span></div>
+<div class="period"><strong>318 leads por día</strong><div aria-hidden="true" class="period-track"><i style="width:100%"></i></div><span>1 al 8 de noviembre: 2.543 leads · $10,55 M · $4.147 por lead</span></div>
+</div>
+<p>El promedio diario creció <strong>33,5%</strong> y el costo por lead bajó <strong>13,5%</strong>. La inversión diaria también subió, de $1,14 M a $1,32 M. La comparación usa promedios diarios porque octubre tiene 31 días y el corte de noviembre, ocho.</p>
+<p>La mejora no fue uniforme. <strong>Administrativo Bello y Asesor Comercial</strong> redujeron su costo de forma marcada; <strong>Soporte</strong> se mantuvo cerca de $6.950 y <strong>Suministros en Rionegro</strong> alrededor de $8.700 en noviembre. Primera Infancia arrancó con volumen y costo bajo, aunque necesita validación comercial.</p>
+<div class="mix">
+<h3>De dónde vinieron los 9.927 leads</h3>
+<p class="note">Composición de los leads de formulario durante todo el periodo.</p>
+<div aria-label="Programas: 8.136 leads; charlas informativas: 932; general Empresas: 859" class="mix-bar" role="img"><span></span><span></span><span></span></div>
+<div class="mix-legend"><span><i aria-hidden="true" class="swatch"></i>Programas <strong>8.136</strong></span><span><i aria-hidden="true" class="swatch magenta"></i>Charlas <strong>932</strong></span><span><i aria-hidden="true" class="swatch yellow"></i>General Empresas <strong>859</strong></span></div>
+</div>
+<p class="note">Estas cifras agrupan programas, general y charlas con objetivo de leads; WhatsApp se lee aparte por tratarse de conversaciones. Los leads son acciones atribuidas en Meta, no personas únicas ni matrículas verificadas.</p>
+</section>
+<section id="angulos">
+<h2>Qué ángulos movieron resultados</h2>
+<p class="lede">Clasificamos cada anuncio de programa una sola vez según su recurso principal observado: imagen con oficio y apoyo económico, video del programa, respaldo de una empresa o mensaje aspiracional. El texto puede combinar varias promesas. Las cifras siguientes <strong>mezclan programas</strong>: sirven para entender el conjunto, no para declarar que un formato o frase causó el resultado.</p>
+<div class="chart-head"><h3>Volumen por enfoque · 1 al 8 de noviembre</h3><p>Las barras muestran leads; el costo se presenta junto a cada resultado.</p></div>
+<div aria-label="Leads de noviembre por enfoque creativo" class="angle-list">
+<div class="angle-row"><strong>Oficio + apoyo en imagen</strong><div aria-hidden="true" class="angle-track"><i style="width:100%"></i></div><div class="angle-value"><strong>1.402 leads</strong>$3.970 por lead</div></div>
+<div class="angle-row"><strong>Video de programa</strong><div aria-hidden="true" class="angle-track"><i style="width:34.88%"></i></div><div class="angle-value"><strong>489 leads</strong>$5.953 por lead</div></div>
+<div class="angle-row"><strong>Empresa aliada + respaldo</strong><div aria-hidden="true" class="angle-track"><i style="width:22.68%"></i></div><div class="angle-value"><strong>318 leads</strong>$2.633 por lead</div></div>
+<div class="angle-row"><strong>Futuro + apoyo económico</strong><div aria-hidden="true" class="angle-track"><i style="width:3.21%"></i></div><div class="angle-value"><strong>45 leads</strong>$3.455 por lead</div></div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Contenido principal</th><th class="num">Octubre<br/>leads · costo</th><th class="num">1–8 noviembre<br/>leads · costo</th><th>Lectura</th></tr></thead>
+<tbody>
+<tr><td><strong>Oficio + apoyo económico en imagen</strong></td><td class="num">3.945 · $5.433</td><td class="num">1.402 · $3.970</td><td>El recurso dominante. Incluye Software, Comercial, Bello y otras líneas; la mezcla cambia entre meses.</td></tr>
+<tr><td><strong>Video de programa</strong></td><td class="num">1.148 · $5.844</td><td class="num">489 · $5.953</td><td>Aporta volumen en Comercial, Soporte y Alimentos. Hay cambios de versión del video durante el periodo.</td></tr>
+<tr><td><strong>Empresa aliada + respaldo</strong></td><td class="num">738 · $4.084</td><td class="num">318 · $2.633</td><td>Administrativo con EPM aporta 527 y 285 leads, respectivamente; no conviene extender ese resultado a todas las marcas aliadas.</td></tr>
+<tr><td><strong>Futuro + apoyo económico</strong></td><td class="num">51 · $3.640</td><td class="num">45 · $3.455</td><td>Una pieza de Alimentos; señal favorable en ese programa, todavía sin comparación controlada.</td></tr>
+</tbody>
+</table></div>
+<p>La dirección más consistente es mantener visible la combinación de <strong>programa, apoyo económico y experiencia</strong>. Para una siguiente prueba, conviene distinguir mejor las tareas del oficio y el respaldo concreto de la empresa, sin prometer beneficios no verificados.</p>
+</section>
+<section id="programas">
+<h2>Lectura por programa</h2>
+<p class="lede">Se muestra una pieza representativa por programa. Las cifras de cada encabezado corresponden al programa completo; las comparaciones dentro del texto agrupan versiones repetidas en conjuntos cuando comparten concepto. Octubre es el mes completo y noviembre corresponde al 1–8.</p>
+<div class="chart-head"><h3>Costo por lead: evolución dentro de cada programa</h3><p>Escala común, de $0 a $12.104. Una barra más corta indica menor costo; no indica calidad del contacto.</p></div>
+<div class="chart-legend"><span><i aria-hidden="true" class="swatch grey"></i>Octubre completo</span><span><i aria-hidden="true" class="swatch magenta"></i>1–8 de noviembre</span></div>
+<div aria-label="Costo por lead en pesos por programa y periodo" class="cpl-chart">
+<div class="cpl-row"><div class="cpl-name">Administrativo · Medellín</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:18.02%"></i></div><b>$2.181</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:19.27%"></i></div><b>$2.333</b></div></div></div>
+<div class="cpl-row"><div class="cpl-name">Primera Infancia · Medellín</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:18.24%"></i></div><b>$2.208</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:21.51%"></i></div><b>$2.603</b></div></div></div>
+<div class="cpl-row"><div class="cpl-name">Logística · Medellín</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:37.11%"></i></div><b>$4.492</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:32.30%"></i></div><b>$3.910</b></div></div></div>
+<div class="cpl-row"><div class="cpl-name">Administrativo · Bello</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:61.29%"></i></div><b>$7.418</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:33.58%"></i></div><b>$4.065</b></div></div></div>
+<div class="cpl-row"><div class="cpl-name">Alimentos y Bebidas · Medellín</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:33.39%"></i></div><b>$4.042</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:33.93%"></i></div><b>$4.107</b></div></div></div>
+<div class="cpl-row"><div class="cpl-name">Asesor Comercial · Medellín</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:57.50%"></i></div><b>$6.960</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:35.52%"></i></div><b>$4.299</b></div></div></div>
+<div class="cpl-row"><div class="cpl-name">Administrativo · Rionegro*</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:100%"></i></div><b>$12.104</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:46.13%"></i></div><b>$5.583</b></div></div></div>
+<div class="cpl-row"><div class="cpl-name">Software · Medellín</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:51.18%"></i></div><b>$6.195</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:49.49%"></i></div><b>$5.990</b></div></div></div>
+<div class="cpl-row"><div class="cpl-name">Soporte de Sistemas · Medellín</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:57.52%"></i></div><b>$6.962</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:57.42%"></i></div><b>$6.950</b></div></div></div>
+<div class="cpl-row"><div class="cpl-name">Suministros y Almacén · Rionegro</div><div class="bar-pair"><div class="bar-line oct"><span>Oct</span><div aria-hidden="true" class="bar-track"><i style="width:73.48%"></i></div><b>$8.894</b></div><div class="bar-line nov"><span>Nov</span><div aria-hidden="true" class="bar-track"><i style="width:71.93%"></i></div><b>$8.707</b></div></div></div>
+</div>
+<p class="note">* Administrativo Rionegro registró solo cinco leads en octubre. Talento Humano no aparece en este gráfico porque no tuvo entrega en noviembre; se analiza abajo.</p>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/20.jpg"><img alt="Pieza de Administrativo Medellín con apoyo económico" src="../assets/empresas-oct-nov/20.jpg"/></a><div class="program-body"><h3>Administrativo · Medellín</h3><div class="metrics">Oct: 927 leads · $2.181   |   Nov: 343 · $2.333</div><p>La pieza con EPM produjo 527 leads en octubre y 285 en noviembre, con costos de $2.163 y $2.331. La imagen de septiembre sin marca específica obtuvo costos muy similares: $2.204 y $2.333.</p><p><span class="decision">Mantener ambos enfoques.</span> El respaldo de empresa funciona en esta línea, pero no podemos separar el efecto de la marca del resto de la pieza y la audiencia.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/03.jpg"><img alt="Pieza de Asesor Comercial con apoyo económico" src="../assets/empresas-oct-nov/03.jpg"/></a><div class="program-body"><h3>Asesor Comercial · Medellín</h3><div class="metrics">Oct: 935 leads · $6.960   |   Nov: 373 · $4.299</div><p>En noviembre, la imagen de septiembre generó 130 leads a $3.582; el anuncio de video sumó 191 a $4.764. En octubre la imagen también tuvo menor costo, aunque el video aportó volumen.</p><p><span class="decision">Priorizar la imagen y conservar el video como comparación.</span> Validar calidad en CRM; el identificador del video cambió el 30 de octubre y no permite asumir un archivo idéntico durante todo el mes.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/07.jpg"><img alt="Pieza de Logística con persona en centro de distribución" src="../assets/empresas-oct-nov/07.jpg"/></a><div class="program-body"><h3>Logística · Medellín</h3><div class="metrics">Oct: 766 leads · $4.492   |   Nov: 354 · $3.910</div><p>La imagen de julio aportó 639 leads a $4.389 en octubre y 297 a $3.765 en noviembre. Los dos videos de septiembre reunieron 56 leads a $4.547 en noviembre.</p><p><span class="decision">Mantener la imagen como base.</span> Probar videos que hagan más tangible la coordinación y el trabajo en almacén, sin retirar los actuales solo por una comparación no controlada.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/05.jpg"><img alt="Pieza de Alimentos y Bebidas con persona en un entorno gastronómico" src="../assets/empresas-oct-nov/05.jpg"/></a><div class="program-body"><h3>Alimentos y Bebidas · Medellín</h3><div class="metrics">Oct: 849 leads · $4.042   |   Nov: 327 · $4.107</div><p>La imagen de julio generó 516 leads a $3.880 en octubre y 193 a $3.811 en noviembre. El video aportó 223 y 78 a costos de $4.614 y $5.100. La pieza aspiracional de futuro sumó 45 leads en noviembre a $3.455.</p><p><span class="decision">Mantener la imagen principal.</span> Seguir probando el mensaje aspiracional y evaluar si el video compensa su mayor costo con mejores contactos.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/06.jpg"><img alt="Pieza de Desarrollo de Software con apoyo económico" src="../assets/empresas-oct-nov/06.jpg"/></a><div class="program-body"><h3>Desarrollo de Software · Medellín</h3><div class="metrics">Oct: 1.054 leads · $6.195   |   Nov: 179 · $5.990</div><p>Las dos réplicas de la pieza de octubre sumaron 673 leads a $5.927 en octubre y 158 a $5.918 en noviembre. La imagen de julio tuvo 309 a $6.324 en octubre; en noviembre solo reunió 19.</p><p><span class="decision">Mantener el concepto de octubre.</span> La pieza anterior tiene una muestra reciente menor; no conviene declarar una mejora causal ni sacar conclusiones por formato.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/04.jpg"><img alt="Fotograma del anuncio de Soporte de Sistemas" src="../assets/empresas-oct-nov/04.jpg"/></a><div class="program-body"><h3>Soporte de Sistemas · Medellín</h3><div class="metrics">Oct: 540 leads · $6.962   |   Nov: 118 · $6.950</div><p>En octubre, el anuncio de video tuvo 396 leads a $5.882 frente a 144 a $9.932 de Réditos. En noviembre, el video registró 96 a $7.279 y Réditos 22 a $5.518: la relación se invirtió con una muestra menor para Réditos.</p><p><span class="watch">Mantener ambos en observación.</span> El video cambió de identificador el 30 de octubre; comparar por periodos y validar calidad antes de retirar alguna versión.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/02.jpg"><img alt="Pieza de Administrativo Bello con apoyo económico" src="../assets/empresas-oct-nov/02.jpg"/></a><div class="program-body"><h3>Administrativo · Bello</h3><div class="metrics">Oct: 543 leads · $7.418   |   Nov: 239 · $4.065</div><p>La pieza de octubre, sumada entre sus dos conjuntos, produjo 542 leads a $7.399 en octubre y 237 a $4.043 en noviembre. La pieza del 30 de octubre solo acumuló tres leads en todo el corte.</p><p><span class="decision">Mantener el concepto principal.</span> La nueva variante necesita más entrega; la caída de costo no prueba que el diseño por sí solo la haya causado.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/18.jpg"><img alt="Pieza de Suministros y Almacén Rionegro" src="../assets/empresas-oct-nov/18.jpg"/></a><div class="program-body"><h3>Suministros y Almacén · Rionegro</h3><div class="metrics">Oct: 147 leads · $8.894   |   Nov: 76 · $8.707</div><p>En noviembre la imagen del 22 de octubre obtuvo 32 leads a $5.362 y el video, 44 a $11.140. Ambos tienen muestras todavía acotadas y condiciones de entrega distintas.</p><p><span class="watch">Revisar el video y sostener la imagen como referencia.</span> Probar una variante más específica sobre inventario y suministros antes de tomar una decisión definitiva.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/33.jpg"><img alt="Pieza de Auxiliar Administrativo Rionegro" src="../assets/empresas-oct-nov/33.jpg"/></a><div class="program-body"><h3>Auxiliar Administrativo · Rionegro</h3><div class="metrics">Oct: 5 leads · $12.104   |   Nov: 59 · $5.583</div><p>En noviembre, la imagen sumó 36 leads a $5.033 y el anuncio de video, 23 a $6.445. El video cambió de identificador el 6 de noviembre.</p><p><span class="watch">Seguir comparando.</span> El arranque de octubre tuvo solo cinco leads y no es una base suficiente para explicar la variación del costo.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/23.jpg"><img alt="Pieza de Atención Integral a la Primera Infancia" src="../assets/empresas-oct-nov/23.jpg"/></a><div class="program-body"><h3>Atención Integral a la Primera Infancia · Medellín</h3><div class="metrics">Oct: 42 leads · $2.208   |   Nov: 186 · $2.603</div><p>La pieza de apoyo económico y formación para el cuidado infantil concentra toda la entrega de esta línea. Sumó 228 leads desde su lanzamiento del 30 de octubre.</p><p><span class="decision">Mantener y validar calidad.</span> Es un arranque favorable en costo, pero todavía no hay una segunda creatividad con volumen para compararla dentro del programa.</p></div></article>
+<article class="program"><a class="thumb" href="../assets/empresas-oct-nov/44.jpg"><img alt="Pieza de Talento Humano con apoyo económico" src="../assets/empresas-oct-nov/44.jpg"/></a><div class="program-body"><h3>Talento Humano y Riesgo Laboral · Medellín</h3><div class="metrics">Oct: 74 leads · $2.206   |   Nov: sin entrega registrada</div><p>En octubre el anuncio de video aportó 55 leads y las imágenes del 1 de octubre, 13 con poca inversión. No hubo gasto en los primeros ocho días de noviembre.</p><p><span class="watch">Sin conclusión nueva para noviembre.</span> El bajo volumen de las imágenes no permite descartarlas, y el nombre actual del video no demuestra que esa versión exacta haya corrido todo octubre.</p></div></article>
+</section>
+<section id="generales">
+<h2>Generales y charlas</h2>
+<p class="lede">Estas iniciativas no dependen de un solo programa. Las dos primeras se leen en leads de formulario; WhatsApp se evalúa por conversaciones iniciadas y no se suma al costo por lead de formulario.</p>
+<div class="general-grid">
+<div class="general-item"><a class="thumb" href="../assets/empresas-oct-nov/09.jpg"><img alt="Fotograma de anuncio de Charlas Informativas" src="../assets/empresas-oct-nov/09.jpg"/></a><h3>Charlas informativas</h3><p><strong>Octubre:</strong> 756 leads a $2.669.<br/><strong>Noviembre:</strong> 176 a $3.601.</p><span class="change">+35% en costo por lead</span><p>El anuncio principal aportó 689 y 113 leads. El segundo reel pasó de 12 a 59. <span class="watch">Mantener ambos para comparar</span> y revisar la asistencia o avance comercial, no solo el registro.</p></div>
+<div class="general-item"><a class="thumb" href="../assets/empresas-oct-nov/11.jpg"><img alt="Fotograma de anuncio general sobre patrocinio empresarial" src="../assets/empresas-oct-nov/11.jpg"/></a><h3>General Empresas</h3><p><strong>Octubre:</strong> 746 leads a $2.706.<br/><strong>Noviembre:</strong> 113 a $3.910.</p><span class="change">+45% en costo por lead</span><p>El anuncio principal concentró 628 y 105 leads. Su mensaje combina patrocinio, experiencia y apoyo económico. <span class="watch">Mantener la propuesta y renovar variantes</span> ante el aumento de costo reciente.</p></div>
+<div class="general-item"><a class="thumb" href="../assets/empresas-oct-nov/08.jpg"><img alt="Pieza que invita a conversar sobre grupos empresariales" src="../assets/empresas-oct-nov/08.jpg"/></a><h3>Orientación por WhatsApp</h3><p><strong>Octubre:</strong> 491 conversaciones · $3.767 por conversación.<br/><strong>Noviembre:</strong> 100 · $4.232.</p><span class="change">+12% en costo por conversación</span><p>El anuncio reúne piezas sobre el proceso y sobre estudiar y trabajar; la imagen es un ejemplo y el resultado no está separado por pieza. <span class="watch">Medir conversaciones útiles y atendidas</span> antes de compararlo con los formularios.</p></div>
+</div>
+<p class="note">Los anuncios de charlas y general tuvieron cambios de identificador de video el 30 de octubre y el 4 de noviembre. La cifra corresponde al historial del anuncio y no demuestra que el archivo visual haya sido idéntico durante todo el corte.</p>
+</section>
+<section id="decisiones">
+<h2>Qué conservar y qué probar</h2>
+<p class="lede">El desempeño favorece varias líneas, pero las decisiones creativas deben tomarse dentro de cada programa y no solo por el promedio general.</p>
+<div class="decision-band">
+<h3>Prioridades para el siguiente corte</h3>
+<div class="decision-grid">
+<div><strong>Mantener</strong><p>Apoyo económico y oficio claro en Administrativo Medellín, Logística, Alimentos, Software y Primera Infancia. Conservar las empresas aliadas cuando corresponda.</p></div>
+<div><strong>Comparar y ajustar</strong><p>Imagen y video en Comercial y Suministros; el cambio de relación entre piezas en Soporte; y el mayor costo reciente de generales y charlas.</p></div>
+<div><strong>Esperar más datos</strong><p>La nueva variante de Bello, el arranque de Rionegro y las imágenes de Talento Humano aún no permiten declarar un ganador definitivo.</p></div>
+</div>
+</div>
+<p><strong>Siguiente contraste:</strong> calidad de contacto, avance comercial y matrícula por programa y formulario. Sin ese cruce, un costo bajo demuestra eficiencia de captación en Meta, no necesariamente mejor resultado comercial.</p>
+</section>
+<section class="method" id="metodo">
+<h2>Fuente y límites</h2>
+<p class="note"><strong>Fuente:</strong> Meta Ads, campañas de Empresas con gasto entre el 1 de octubre y el 8 de noviembre de 2026, inclusive; corte consultado el 9 de noviembre. Se incluyen campañas activas o pausadas si registraron inversión en la ventana. Moneda: pesos colombianos de plataforma.</p>
+<p class="note"><strong>Cálculo:</strong> se suma inversión y acciones <em>lead</em> atribuidas por Meta, y se divide el gasto entre los leads; no se suman acciones equivalentes duplicadas. WhatsApp se separa y usa conversaciones iniciadas. La misma pieza repetida en conjuntos se suma en su concepto; cuando existen dos videos diferentes agrupados se indica en el texto.</p>
+<p class="note"><strong>Interpretación:</strong> la clasificación de ángulos es editorial y usa el material y texto recuperados; cada anuncio se asignó a una familia principal. Los videos se revisaron a partir de sus fotogramas disponibles y textos, no mediante una transcripción completa del audio. En varios anuncios cambiaron los identificadores de video o creativo durante el periodo; los datos históricos pertenecen al anuncio y no garantizan que la pieza mostrada represente cada versión anterior. Diferencias de audiencia, fechas, inversión y formulario impiden inferir causalidad. No se contó con resultados de CRM o matrícula.</p>
+</section>
+</main>
+</body>
+</html>
