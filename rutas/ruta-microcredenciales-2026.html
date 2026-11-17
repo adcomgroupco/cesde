@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Borrador de estrategia de pauta para Microcredenciales CESDE." />
+  <title>Ruta Microcredenciales · CESDE</title>
+  <link rel="stylesheet" href="../assets/css/adcom-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/ruta.css">
+  <style>
+    .investment-layout { display:grid; grid-template-columns:240px 1fr; align-items:center; gap:32px; margin:20px 0 18px }
+    .donut-chart { width:220px; aspect-ratio:1; border-radius:50%; background:conic-gradient(var(--amarillo) 0deg 90deg, var(--negro) 90deg 360deg); display:grid; place-items:center; margin:auto; position:relative }
+    .donut-chart::before { content:""; position:absolute; width:67%; height:67%; border-radius:50%; background:var(--blanco) }
+    .donut-center { position:relative; z-index:1; text-align:center; line-height:1.25 }
+    .donut-center strong { display:block; font-size:1.18rem; color:var(--negro) }
+    .donut-center span { font-size:.73rem; color:var(--gris-medio) }
+    .investment-lines { display:grid; gap:12px }
+    .investment-line { display:grid; grid-template-columns:76px 1fr auto; align-items:center; gap:14px; background:var(--gris-claro); border:1px solid var(--gris-borde); border-radius:var(--radius); padding:15px 18px }
+    .investment-line.primary { background:#fffbea; border-left:5px solid var(--amarillo) }
+    .investment-line.performance { background:#f5f5f5; border-left:5px solid var(--negro) }
+    .investment-pct { font-size:1.8rem; line-height:1; font-weight:700; color:var(--negro) }
+    .investment-line h3 { margin:0 0 3px; font-size:.95rem }
+    .investment-line p { margin:0; font-size:.78rem; line-height:1.4 }
+    .investment-channel { font-size:.68rem; font-weight:700; border-radius:99px; background:var(--blanco); border:1px solid var(--gris-borde); padding:5px 9px; white-space:nowrap }
+    .phase-rail { display:grid; grid-template-columns:1fr 34px 1fr 34px 1fr; align-items:center; margin-top:16px; gap:8px }
+    .phase-stop { background:var(--gris-claro); border:1px solid var(--gris-borde); padding:11px 12px; border-radius:var(--radius); font-size:.75rem; line-height:1.35 }
+    .phase-stop strong { display:block; color:var(--negro); margin-bottom:2px }
+    .phase-stop.future { border-style:dashed; background:var(--blanco) }
+    .phase-connector { height:2px; background:var(--gris-medio); position:relative }
+    .phase-connector::after { content:""; position:absolute; right:-1px; top:-4px; border:5px solid transparent; border-left-color:var(--gris-medio) }
+    .creative-card { background:var(--blanco); border:1px solid var(--gris-borde); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; min-height:245px }
+    .creative-pair { flex:1; min-height:188px; padding:12px; display:grid; grid-template-columns:96px minmax(0,1fr); gap:9px; align-items:center; background:#f4f4f1 }
+    .creative-art { height:168px; padding:10px; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; color:#111; border-radius:10px; background:linear-gradient(145deg,#dceeff 0 13%,#f72585 13% 76%,#fff9a8 76% 100%) }
+    .creative-art.feed { height:150px; background:linear-gradient(145deg,#e4f2ff 0 20%,#f72585 20% 74%,#fff9a8 74% 100%) }
+    .creative-art.neutral { background:linear-gradient(145deg,#e4f2ff,#f7f7f8 70%,#ffd400) }
+    .creative-art.conversion { background:linear-gradient(145deg,#fff9a8,#ffe45c 62%,#e4f2ff 63%) }
+    .creative-art .brandline { font-size:.46rem; line-height:1.2; font-weight:700; letter-spacing:.01em }
+    .creative-art .headline { max-width:100%; font-size:.66rem; line-height:1.22; font-weight:500 }
+    .creative-art.feed .headline { font-size:.7rem }
+    .creative-art .headline strong { font-weight:700 }
+    .preview-format { align-self:flex-start; padding:2px 5px; border-radius:99px; background:rgba(255,255,255,.86); font-size:.47rem; line-height:1.3; font-weight:700; text-transform:uppercase }
+    .creative-caption { padding:12px 15px 14px }
+    .creative-caption h3 { margin:0 0 4px; font-size:.93rem }
+    .creative-caption p { margin:0; color:var(--gris-oscuro); font-size:.77rem; font-weight:300 }
+    .file-list { display:flex; flex-wrap:wrap; gap:6px; margin-top:9px }
+    .file-list code { font:500 .62rem 'Poppins',sans-serif; color:var(--gris-oscuro); background:#f4f4f1; border:1px solid var(--gris-borde); border-radius:5px; padding:3px 6px }
+    .phase-card { position:relative; overflow:hidden }
+    .phase-card .step-number { color:var(--amarillo) }
+    .event-flow { display:flex; align-items:stretch; gap:8px; margin:15px 0 8px }
+    .event-node { flex:1; text-align:center; background:var(--gris-claro); border:1px solid var(--gris-borde); padding:12px 9px; border-radius:var(--radius); font-size:.79rem }
+    .event-arrow { align-self:center; font-size:1.2rem; font-weight:700; color:var(--gris-oscuro) }
+    .note-box { background:var(--gris-claro); border-left:4px solid var(--amarillo); padding:13px 16px; margin-top:16px; border-radius:0 var(--radius) var(--radius) 0 }
+    .future-box { border:1px dashed var(--gris-medio); border-radius:var(--radius); padding:15px 18px; margin-top:18px; display:flex; gap:14px; align-items:flex-start }
+    .future-box .tag { flex:0 0 auto }
+    .source-note a { color:inherit }
+    @media(max-width:760px) { .investment-layout { grid-template-columns:1fr; gap:15px } .donut-chart { width:160px } .investment-line { grid-template-columns:60px 1fr; gap:9px } .investment-channel { grid-column:2; justify-self:start } .phase-rail { grid-template-columns:1fr; } .phase-connector { width:2px; height:16px; margin:auto } .phase-connector::after { right:-4px; top:auto; bottom:-1px; transform:rotate(90deg) } .event-flow { flex-direction:column } .event-arrow { transform:rotate(90deg) } .creative-card { min-height:210px } .creative-pair { grid-template-columns:82px minmax(0,1fr); padding:9px; gap:7px } .creative-art { height:150px } .creative-art.feed { height:136px } }
+  </style>
+</head>
+<body>
+  <button class="index-toggle-btn" onclick="toggleIndex()">Índice</button>
+  <div class="index-modal" id="indexModal">
+    <button class="index-close" onclick="toggleIndex()">×</button>
+    <h2>Microcredenciales</h2>
+    <ul class="index-list" id="indexList"></ul>
+  </div>
+
+  <div id="presentation-container">
+    <section class="slide slide-cover active" data-title="Portada">
+      <div class="slide-inner">
+        <div class="cover-kicker">CESDE · Ruta de pauta — Borrador 01</div>
+        <h1>Haz visible lo que sabes hacer</h1>
+        <p class="body-text">Una primera ruta para presentar Microcredenciales y captar interesados en el piloto de <strong>Automatización Inteligente de Procesos</strong>.</p>
+        <p class="source-note" style="margin-top:22px">Propuesta inicial · Meta como canal de lanzamiento · TikTok sujeto a una siguiente etapa y a una inversión que permita sostenerlo.</p>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Dos objetivos, una ruta">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Dos objetivos, una ruta</h2></div></div>
+          <div class="slide-desc-col"><p class="subtext">Construir comprensión de categoría y convertir el interés en registros.</p><p class="body-text">Microcredenciales necesita explicar qué reconoce y por qué le sirve a una persona; el curso piloto necesita una invitación concreta para inscribirse. La pauta separa esos trabajos y lleva primero al público desde el concepto hacia la oferta.</p></div>
+        </div>
+        <div class="content-area">
+          <div class="cards-3">
+            <div class="flat-card"><span class="tag light">01 · Categoría</span><h3>Que entiendan el valor</h3><p>Una microcredencial hace visible una competencia demostrada. El mensaje parte de habilidades que la persona ya tiene y que puede evidenciar.</p></div>
+            <div class="flat-card"><span class="tag green">02 · Piloto</span><h3>Que conozcan una aplicación</h3><p>Automatización Inteligente de Procesos: nivel básico, 20 horas y modalidad híbrida. Aprender a reducir tareas repetitivas sin necesitar saber programar.</p></div>
+            <div class="flat-card"><span class="tag gray">03 · Acción</span><h3>Que completen el formulario</h3><p>Resolver primero la medición y el recorrido del formulario de Zoho para que un registro confirmado se distinga de un clic en el botón.</p></div>
+          </div>
+          <div class="callout" style="margin-top:19px"><h3>Idea rectora</h3><p><strong>Desarrolla una habilidad. Demuéstrala. Hazla visible.</strong> La categoría enmarca el beneficio; la automatización vuelve ese beneficio tangible para una tarea cotidiana.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Distribución de inversión">
+      <div class="slide-inner">
+        <div class="slide-top-section"><div class="slide-title-col"><div class="slide-header"><h2>Distribución de inversión</h2></div></div><div class="slide-desc-col"><p class="subtext">Concentrar la primera etapa en Meta para evitar dispersar una bolsa pequeña.</p><p class="body-text">Los porcentajes se aplican al presupuesto disponible para pauta. El monto final y la duración del vuelo se cierran al confirmar la inversión aprobada para medios.</p></div></div>
+        <div class="content-area">
+          <div class="investment-layout" aria-label="Gráfica de distribución de pauta: 25 por ciento posicionamiento y 75 por ciento captación en Meta">
+            <div class="donut-chart" role="img" aria-label="Gráfica circular: 25% posicionamiento, 75% captación"><div class="donut-center"><strong>100%</strong><span>pauta inicial<br>en Meta</span></div></div>
+            <div class="investment-lines">
+              <div class="investment-line primary"><span class="investment-pct">25%</span><div><h3>Presentar Microcredenciales</h3><p>Alcance y reproducciones de video · preparar audiencias de interacción.</p></div><span class="investment-channel">DESCUBRIMIENTO</span></div>
+              <div class="investment-line performance"><span class="investment-pct">75%</span><div><h3>Captar interesados en el piloto</h3><p>Automatización Inteligente de Procesos · optimizar a Lead cuando Zoho y el evento estén validados.</p></div><span class="investment-channel">CONVERSIÓN</span></div>
+            </div>
+          </div>
+          <div class="phase-rail" aria-label="Canal recomendado por etapa"><div class="phase-stop"><strong>Ahora · Meta</strong>Concentrar presupuesto y aprendizaje.</div><span class="phase-connector"></span><div class="phase-stop"><strong>Revisar resultados</strong>Calidad de leads y costo por registro válido.</div><span class="phase-connector"></span><div class="phase-stop future"><strong>Después · TikTok</strong>Solo si hay presupuesto para sostener una etapa propia.</div></div>
+          <p class="source-note" style="margin-top:14px">Los porcentajes se aplican al presupuesto aprobado para pauta. El monto y la duración se cierran en el montaje; no se proyectan CPL ni volumen antes de validar la inversión y la conversión.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Etapas de ejecución">
+      <div class="slide-inner">
+        <div class="slide-top-section"><div class="slide-title-col"><div class="slide-header"><h2>Etapas de ejecución</h2></div></div><div class="slide-desc-col"><p class="subtext">Dejar lista la conversión, lanzar, aprender y escalar lo que responda.</p><p class="body-text">Las etapas siguen el recorrido real de la persona y usan las piezas recibidas según su propósito: primero categoría, luego el curso como respuesta directa.</p></div></div>
+        <div class="content-area">
+          <div class="steps-grid">
+            <div class="step-card phase-card"><div class="step-number">01</div><h3>Preparar</h3><p>Revisar los CTA y unificar su destino; resolver la confirmación del formulario Zoho; instalar GTM y píxeles; probar eventos y UTMs antes de invertir.</p></div>
+            <div class="step-card phase-card"><div class="step-number">02</div><h3>Presentar</h3><p>Usar el 25% de pauta en Meta con las piezas de categoría. Construir audiencias de video e interacción para alimentar el siguiente paso.</p></div>
+            <div class="step-card phase-card"><div class="step-number">03</div><h3>Captar</h3><p>Usar el 75% en Meta con las piezas del curso piloto, una propuesta clara de 20 horas y CTA consistente hacia el formulario de Zoho.</p></div>
+            <div class="step-card phase-card"><div class="step-number">04</div><h3>Optimizar</h3><p>Revisar semanalmente entrega, frecuencia, clics, inicios y envíos confirmados. Redistribuir entre anuncios según leads válidos y calidad reportada.</p></div>
+            <div class="step-card phase-card"><div class="step-number">05</div><h3>Ampliar</h3><p>Valorar retargeting solo si hay tamaño suficiente de audiencia. Revisar TikTok en una fase posterior si el presupuesto puede sostener otro conjunto de aprendizaje.</p></div>
+            <div class="step-card phase-card"><div class="step-number">06</div><h3>Conectar</h3><p>Cruzar los registros con Zoho y admisiones: contacto, interés, avance y matrícula. Ajustar el mensaje a partir de la calidad, no solo del volumen.</p></div>
+          </div>
+          <div class="note-box"><strong>Ritmo de control sugerido:</strong> lectura de entrega durante los primeros días; primer ajuste de presupuesto al contar con registros verificables y una muestra mínima, y reporte semanal conjunto de pauta y calidad comercial.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Piezas · posicionamiento de categoría">
+      <div class="slide-inner">
+        <div class="slide-top-section"><div class="slide-title-col"><div class="slide-header"><h2>Piezas · categoría</h2></div></div><div class="slide-desc-col"><p class="subtext">Tres pares Story / Feed para presentar el valor de Microcredenciales.</p><p class="body-text">La ruta aprovecha los ángulos distintos de las piezas recibidas para probar qué puerta de entrada genera atención: reconocer una habilidad, demostrarla o seguir avanzando.</p></div></div>
+        <div class="content-area"><div class="cards-3">
+          <article class="creative-card"><div class="creative-pair"><div class="creative-art category"><span class="preview-format">Story</span><span class="brandline">CESDE · COMFAMA</span><span class="headline">¿Tienes habilidades que todavía no has podido <strong>demostrar?</strong><br>Hazlas visibles.</span></div><div class="creative-art feed category"><span class="preview-format">Feed</span><span class="brandline">CESDE · COMFAMA</span><span class="headline">¿Tienes habilidades que todavía no has podido <strong>demostrar?</strong><br>Hazlas visibles.</span></div></div><div class="creative-caption"><h3>01 · Reconocer y demostrar</h3><p>Presentar el valor de la categoría.</p><div class="file-list"><code>1/hs-1.jpg</code><code>1/post-1.jpg</code></div></div></article>
+          <article class="creative-card"><div class="creative-pair"><div class="creative-art neutral"><span class="preview-format">Story</span><span class="brandline">CESDE · COMFAMA</span><span class="headline">Tu hoja de vida dice lo que estudiaste.<br><strong>¿Pero cómo lo demuestras?</strong></span></div><div class="creative-art feed neutral"><span class="preview-format">Feed</span><span class="brandline">CESDE · COMFAMA</span><span class="headline">Tu hoja de vida dice lo que estudiaste.<br><strong>¿Pero cómo lo demuestras?</strong></span></div></div><div class="creative-caption"><h3>02 · Evidencia para tu hoja de vida</h3><p>Mostrar cómo hacer visible una competencia.</p><div class="file-list"><code>3/hs-2.jpg</code><code>3/post-2.jpg</code></div></div></article>
+          <article class="creative-card"><div class="creative-pair"><div class="creative-art conversion"><span class="preview-format">Story</span><span class="brandline">CESDE · COMFAMA</span><span class="headline">Desarrolla una habilidad.<br><strong>Demuéstrala. Hazla visible.</strong><br>Sigue avanzando.</span></div><div class="creative-art feed conversion"><span class="preview-format">Feed</span><span class="brandline">CESDE · COMFAMA</span><span class="headline">Desarrolla una habilidad.<br><strong>Demuéstrala. Hazla visible.</strong><br>Sigue avanzando.</span></div></div><div class="creative-caption"><h3>03 · Progreso profesional</h3><p>Ampliar la relevancia de la categoría.</p><div class="file-list"><code>5/hs-3.jpg</code><code>5/post-3.jpg</code></div></div></article>
+        </div><p class="source-note" style="margin-top:13px">Las tarjetas son esquemas para asignar las piezas, no los artes originales. Las referencias (por ejemplo, <code>3/hs-2.jpg</code>) son relativas a <strong>Piezas pauta/</strong> en OneDrive; los JPG fuente todavía no están copiados en este repositorio.</p></div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Piezas · captación del piloto">
+      <div class="slide-inner">
+        <div class="slide-top-section"><div class="slide-title-col"><div class="slide-header"><h2>Piezas · curso piloto</h2></div></div><div class="slide-desc-col"><p class="subtext">Dos pares Story / Feed para llevar a registro con una oferta concreta.</p><p class="body-text">Estas piezas hablan del freno —creer que automatizar exige programar— y de la aplicación. Mantener el texto del anuncio, la landing y el formulario alineados con nivel básico, duración y modalidad.</p></div></div>
+        <div class="content-area"><div class="cards-3">
+          <article class="creative-card"><div class="creative-pair"><div class="creative-art conversion"><span class="preview-format">Story</span><span class="brandline">CESDE · MICROCREDENCIALES</span><span class="headline">¿Crees que para automatizar necesitas saber programar?<br><strong>Nivel básico</strong></span></div><div class="creative-art feed conversion"><span class="preview-format">Feed</span><span class="brandline">CESDE · MICROCREDENCIALES</span><span class="headline">¿Crees que para automatizar necesitas saber programar?<br><strong>Nivel básico</strong></span></div></div><div class="creative-caption"><h3>01 · Derribar la barrera técnica</h3><p>Presentar automatización desde nivel básico.</p><div class="file-list"><code>2/hs-1-pauta.jpg</code><code>2/post-1-pauta.jpg</code></div></div></article>
+          <article class="creative-card"><div class="creative-pair"><div class="creative-art neutral"><span class="preview-format">Story</span><span class="brandline">CESDE · 20 HORAS · HÍBRIDO</span><span class="headline">Automatización Inteligente de Procesos<br><strong>20 horas · Nivel básico</strong></span></div><div class="creative-art feed neutral"><span class="preview-format">Feed</span><span class="brandline">CESDE · 20 HORAS · HÍBRIDO</span><span class="headline">Automatización Inteligente de Procesos<br><strong>20 horas · Nivel básico</strong></span></div></div><div class="creative-caption"><h3>02 · Mostrar la oferta</h3><p>Duración, modalidad y nivel del curso.</p><div class="file-list"><code>4/hs-2-pauta.jpg</code><code>4/post-2-pauta.jpg</code></div></div></article>
+          <div class="flat-card"><span class="tag green">Uso en pauta</span><h3>Una prueba por ángulo</h3><p>Rotar Story y Feed sin fragmentar demasiado el presupuesto. Mantener el anuncio de categoría separado del anuncio de curso para interpretar qué objetivo trae cada registro.</p><p style="margin-top:12px"><strong>CTA:</strong> conocer el curso / inscribirme. Elegir una etiqueta y un único destino final para todas las variantes.</p></div>
+        </div><div class="callout" style="margin-top:17px"><h3>Banco recibido</h3><p>Carpetas <strong>1, 3 y 5</strong>: comunicación general de Microcredenciales. Carpetas <strong>2 y 4</strong>: comunicación del piloto de Automatización Inteligente de Procesos. Cada carpeta incluye Story y adaptación Feed. Las diez piezas están mapeadas por nombre; sus imágenes fuente faltan por incorporar al repo.</p></div></div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Landing, Zoho y medición">
+      <div class="slide-inner">
+        <div class="slide-top-section"><div class="slide-title-col"><div class="slide-header"><h2>Landing y medición</h2></div></div><div class="slide-desc-col"><p class="subtext">Sin una señal de éxito, Meta no distingue visitas de registros completados.</p><p class="body-text">Hoy el formulario parece estar servido por Zoho y no se observa una página de gracias. También hay botones que llevan a recorridos distintos. Resolver esa experiencia es parte del arranque de pauta.</p></div></div>
+        <div class="content-area">
+          <div class="event-flow" aria-label="Flujo de conversión medible"><div class="event-node"><strong>Anuncio</strong><br>UTM por campaña y pieza</div><div class="event-arrow">→</div><div class="event-node"><strong>Landing CESDE</strong><br>GTM + Meta Pixel</div><div class="event-arrow">→</div><div class="event-node"><strong>Zoho</strong><br>envío validado</div><div class="event-arrow">→</div><div class="event-node"><strong>Gracias</strong><br>evento Lead</div></div>
+          <div class="table-wrap"><table><thead><tr><th>Elemento</th><th>Acción recomendada</th><th>Señal verificable</th></tr></thead><tbody>
+            <tr><td><strong>Tag Manager y pixel</strong></td><td>Instalar GTM, configurar el Meta Pixel y documentar los IDs de cuenta aprobados. Revisar consentimiento y no duplicar etiquetas existentes.</td><td>PageView y eventos de navegación registrados una sola vez.</td></tr>
+            <tr><td><strong>Formulario Zoho</strong></td><td>Preferir redirigir el éxito a una página de gracias propia de CESDE. Disparar Lead allí solo después de confirmar envío.</td><td>Envío de prueba validado en Zoho y evento Lead recibido en Meta.</td></tr>
+            <tr><td><strong>Alternativa técnica</strong></td><td>Si Zoho no permite redirección, emitir un evento de <code>dataLayer</code> desde la confirmación real del formulario y enrutarlo por GTM. No usar el clic del CTA como conversión.</td><td>Prueba controlada demuestra que el evento solo ocurre tras respuesta exitosa.</td></tr>
+            <tr><td><strong>Recorrido y UTMs</strong></td><td>Unificar el destino de todos los CTA; conservar UTMs hasta Zoho y revisar campos ocultos para atribución.</td><td>El origen del registro queda identificable en Analytics / CRM.</td></tr>
+          </tbody></table></div>
+          <div class="note-box"><strong>Antes de activar:</strong> prueba completa en móvil, envío y recepción en Zoho, llegada a gracias o evento equivalente, deduplicación y lectura de UTMs. La optimización a Leads empieza después de verificar el evento.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Control, aprendizaje y siguiente decisión">
+      <div class="slide-inner">
+        <div class="slide-top-section"><div class="slide-title-col"><div class="slide-header"><h2>Control y siguiente decisión</h2></div></div><div class="slide-desc-col"><p class="subtext">Medir lo que ayude a decidir si el curso conecta con su público.</p><p class="body-text">El informe debe unir inversión, comportamiento de la landing y seguimiento de los registros. Los resultados iniciales son señales de aprendizaje, no una promesa de matrículas.</p></div></div>
+        <div class="content-area">
+          <div class="table-wrap"><table><thead><tr><th>Momento</th><th>Qué revisar</th><th>Decisión</th></tr></thead><tbody>
+            <tr><td><strong>Antes de salir</strong></td><td>CTA y destino, Zoho, UTMs, GTM, Pixel, evento Lead y prueba móvil.</td><td>Habilitar campañas de conversión después de aprobar la prueba técnica.</td></tr>
+            <tr><td><strong>Durante el vuelo</strong></td><td>Alcance, frecuencia, retención, CTR, visitas a landing, tasa de envío y calidad de lead.</td><td>Rotar creatividades o ajustar el reparto entre objetivos sin abrir más canales.</td></tr>
+            <tr><td><strong>Al cierre</strong></td><td>Leads válidos, velocidad de contacto, avance en Zoho y consultas/matrículas atribuibles.</td><td>Definir segunda etapa, nuevo ciclo del piloto y si existe base para TikTok o retargeting.</td></tr>
+          </tbody></table></div>
+          <div class="future-box"><span class="tag light">Siguiente etapa</span><p><strong>TikTok puede entrar después</strong> si hay presupuesto para mantener una campaña y medición propias, y si las piezas verticales muestran señales útiles en Meta. Si el presupuesto sigue ajustado, concentrarlo en Meta y reutilizar los aprendizajes antes de abrir otro canal.</p></div>
+          <div class="next-note" style="margin-top:18px"><div class="callout-mini"><h3>Decisiones para cerrar el montaje</h3><p>Confirmar monto de pauta y duración; definir quién instala y valida GTM/píxel; confirmar si Zoho admite redirección y aprobar destino único de los CTA.</p></div><div class="callout-mini"><h3>Entregable de la primera etapa</h3><p>Campañas Meta activas con las cinco duplas de piezas distribuidas por objetivo, conversión probada y una lectura semanal de pauta y calidad de registros.</p></div></div>
+          <p class="source-note" style="margin-top:18px">Documento de trabajo · Distribución y duración sujetas a confirmación de inversión para medios y preparación técnica de la landing.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="nav-controls"><button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">Anterior</button><button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Siguiente</button></div>
+  <div class="slide-counter" id="slideCounter"></div><div class="progress-bar" id="progressBar"></div>
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let currentSlide = 0;
+    function updateSlide() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === slides.length - 1;
+      document.getElementById('progressBar').style.width = ((currentSlide + 1) / slides.length) * 100 + '%';
+      document.getElementById('slideCounter').textContent = (currentSlide + 1) + ' / ' + slides.length;
+    }
+    function changeSlide(dir) { const next = currentSlide + dir; if (next >= 0 && next < slides.length) { currentSlide = next; updateSlide(); } }
+    function goToSlide(i) { currentSlide = i; updateSlide(); toggleIndex(false); }
+    function toggleIndex(force) { const modal = document.getElementById('indexModal'); const open = typeof force === 'boolean' ? force : !modal.classList.contains('open'); modal.classList.toggle('open', open); }
+    function buildIndex() { const list = document.getElementById('indexList'); slides.forEach((s, i) => { const li = document.createElement('li'); li.textContent = String(i + 1).padStart(2, '0') + ' · ' + s.dataset.title; li.onclick = () => goToSlide(i); list.appendChild(li); }); }
+    document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') changeSlide(1); if (e.key === 'ArrowLeft') changeSlide(-1); if (e.key === 'Escape') toggleIndex(false); });
+    buildIndex(); updateSlide();
+  </script>
+</body>
+</html>
