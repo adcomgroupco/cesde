@@ -1,7 +1,7 @@
 # CESDE - WhatsApp TECPER (julio 2026)
 
 Campaña: **1. TECPERFMED - Whatsapp 2026-2**.
-HTML: `pages/reporte-whatsapp-tecper-jul.html`.
+HTML: `tecnicos/whatsapp-2026-07.html`.
 
 ## Corte
 

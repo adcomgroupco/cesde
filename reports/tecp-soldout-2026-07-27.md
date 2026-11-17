@@ -2,7 +2,7 @@
 
 - Previews unicos: 49.
 - Criterio: una sola aparicion por variante creativa, tomando un ad set de referencia por programa.
-- HTML: `pages/reporte-tecper-soldout-27-07.html`.
+- HTML: `tecnicos/anuncios-cupos-2026-07-27.html`.
 
 | Programa | Sede | Previews | Ad set referencia |
 |---|---|---:|---|

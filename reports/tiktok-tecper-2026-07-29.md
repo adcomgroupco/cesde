@@ -1,7 +1,7 @@
 # CESDE - TikTok Ads TECPER (mayo-julio 2026)
 
 Campaña: **1. TECPER - Campaña General Tiktok**.
-HTML: `pages/reporte-tiktok-tecper-may-jul.html`.
+HTML: `tecnicos/tiktok-2026-05-a-07.html`.
 
 ## Corte
 

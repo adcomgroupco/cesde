@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CESDE | Plan de Técnicos · 2026-2</title>
+<link rel="stylesheet" href="../assets/css/adcom-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="../assets/css/ruta.css">
+</head>
+<body>
+  <button class="index-toggle-btn" onclick="toggleIndex()">Índice</button>
+  <div class="index-modal" id="indexModal">
+    <button class="index-close" onclick="toggleIndex()">×</button>
+    <h2>Ruta estratégica</h2>
+    <ul class="index-list" id="indexList"></ul>
+  </div>
+
+  <div id="presentation-container">
+    <section class="slide slide-cover active" data-title="Portada">
+      <div class="slide-inner">
+        <div class="cover-kicker">CESDE · Ruta Estratégica de Pauta Digital</div>
+        <h1>Plan de Técnicos · 2026-2</h1>
+        <p class="body-text">Ruta de inversión, medios, audiencias y priorización de programas bajo un presupuesto total de <strong>$169.000.000</strong>.</p>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Objetivo estratégico">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Objetivo</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">De generación de leads a matrículas reales</p>
+            <p class="body-text">La pauta debe cubrir todo el recorrido: generar demanda, capturar intención, recuperar interesados y alimentar al equipo comercial con leads priorizados por programa, sede y potencial de conversión.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="stats-grid">
+            <div class="stat-card"><span class="stat-val">$169M</span><span class="stat-label">Inversión total</span><span class="stat-note">Abril a agosto</span></div>
+            <div class="stat-card"><span class="stat-val">$149M</span><span class="stat-label">Performance</span><span class="stat-note">Meta, Google y TikTok</span></div>
+            <div class="stat-card"><span class="stat-val">$20M</span><span class="stat-label">Branding</span><span class="stat-note">DOOH · Spotify</span></div>
+            <div class="stat-card"><span class="stat-val">~1.778</span><span class="stat-label">Matrículas proyectadas</span><span class="stat-note">Escenario 5% lead → matrícula</span></div>
+          </div>
+          <div class="callout" style="margin-top:24px">
+            <h3>Lectura estratégica</h3>
+            <p>El reto no es solo aumentar el volumen de leads. La ruta debe mejorar la calidad del contacto, ordenar la inversión por programa y activar una presión comercial suficiente para convertir el interés en matrícula.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Enfoque por funnel">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Funnel</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Arquitectura de campaña</p>
+            <p class="body-text">Cada medio cumple un rol diferente. La eficiencia nace de separar mensajes, audiencias y KPIs por etapa, no de poner todo a pelear por el mismo lead.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="timeline-container">
+            <div class="timeline-item">
+              <div class="timeline-header"><h3>1. Awareness territorial</h3><div class="timeline-tags"><span class="tl-tag highlight">DOOH</span><span class="tl-tag">Spotify</span></div></div>
+              <p>Presencia en puntos de alto tráfico para instalar recordación de marca, cercanía de sedes y oferta académica antes del momento de decisión.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-header"><h3>2. Consideración y descubrimiento</h3><div class="timeline-tags"><span class="tl-tag highlight">Meta</span><span class="tl-tag">TikTok</span></div></div>
+              <p>Contenido por programa, beneficios, empleabilidad, duración, sedes y formato. Aquí TikTok ayuda a abrir demanda joven con códigos más nativos.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-header"><h3>3. Captura de intención</h3><div class="timeline-tags"><span class="tl-tag highlight">Google Search</span><span class="tl-tag">Meta Forms</span></div></div>
+              <p>Separación de campañas por programa y sede para capturar búsquedas activas y formularios de mayor intención.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-header"><h3>4. Remarketing y cierre</h3><div class="timeline-tags"><span class="tl-tag highlight">CRM</span><span class="tl-tag">Audiencias calientes</span></div></div>
+              <p>Recuperación de visitantes web, formularios incompletos, video viewers, bases de datos y leads no contactados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Mix de medios">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Mix de medios</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Distribución a $169M</p>
+            <p class="body-text">Se mantiene performance como motor de captación, con inversión distribuida por programa entre Meta, Google y TikTok, y branding alineado con DOOH y Spotify.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="visual-board">
+            <div class="donut-card">
+              <h3>Participación del presupuesto</h3>
+              <div class="donut" aria-label="Distribución de inversión total"></div>
+              <div class="legend">
+                <div class="legend-row"><span class="dot"></span><span>Meta Ads</span><strong>63,3%</strong></div>
+                <div class="legend-row"><span class="dot black"></span><span>Google Ads</span><strong>17,8%</strong></div>
+                <div class="legend-row"><span class="dot gray"></span><span>TikTok Ads</span><strong>7,1%</strong></div>
+                <div class="legend-row"><span class="dot lightgray"></span><span>Branding</span><strong>11,8%</strong></div>
+              </div>
+            </div>
+            <div class="bars-card">
+              <h3>Inversión por medio</h3>
+              <div class="bar-list" style="margin-top:18px">
+                <div class="bar-row"><strong>Meta</strong><div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div><strong>$107,0M</strong></div>
+                <div class="bar-row"><strong>Google</strong><div class="bar-track"><div class="bar-fill black" style="--w:28%"></div></div><strong>$30,0M</strong></div>
+                <div class="bar-row"><strong>TikTok</strong><div class="bar-track"><div class="bar-fill gray" style="--w:11.2%"></div></div><strong>$12,0M</strong></div>
+                <div class="bar-row"><strong>Branding</strong><div class="bar-track"><div class="bar-fill lightgray" style="--w:18.7%"></div></div><strong>$20,0M</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="mix-interactive">
+            <div class="mix-tabs">
+              <button class="mix-tab active" onclick="showMix('meta', this)">Meta Ads <span class="pct">63,3%</span></button>
+              <button class="mix-tab" onclick="showMix('google', this)">Google Ads <span class="pct">17,8%</span></button>
+              <button class="mix-tab" onclick="showMix('tiktok', this)">TikTok Ads <span class="pct">7,1%</span></button>
+              <button class="mix-tab" onclick="showMix('branding', this)">Branding <span class="pct">11,8%</span></button>
+            </div>
+            <div class="mix-panel-container">
+              <div class="mix-panel active" id="mix-meta">
+                <div class="panel-header-badge">$107.000.000</div>
+                <h3>Motor principal de leads y remarketing</h3>
+                <div class="panel-grid">
+                  <div class="panel-box"><h4>Rol</h4><p>Escalar formularios, mensajes, tráfico calificado y remarketing por programa.</p></div>
+                  <div class="panel-box"><h5>CPL aplicado</h5><p>CPL por programa tomado del nuevo flow adjunto.</p></div>
+                  <div class="panel-box"><h5>Uso táctico</h5><p>Principal capa diferenciada por programa, sede y etapa del funnel.</p></div>
+                  <div class="panel-box"><h5>KPI</h5><p>CPL, contactabilidad, tasa de lead calificado y avance a matrícula.</p></div>
+                </div>
+              </div>
+              <div class="mix-panel" id="mix-google">
+                <div class="panel-header-badge">$30.000.000</div>
+                <h3>Captura de intención activa</h3>
+                <div class="panel-grid">
+                  <div class="panel-box"><h4>Rol</h4><p>Tomar búsquedas de programas técnicos, empleabilidad, sedes y categorías específicas.</p></div>
+                  <div class="panel-box"><h5>CPL ref.</h5><p>Referencia eficiente para capturar intención activa.</p></div>
+                  <div class="panel-box"><h5>Uso táctico</h5><p>Search y demanda de alta intención por programas prioritarios.</p></div>
+                  <div class="panel-box"><h5>KPI</h5><p>Conversión por intención, calidad del lead y costo por matrícula atribuida.</p></div>
+                </div>
+              </div>
+              <div class="mix-panel" id="mix-tiktok">
+                <div class="panel-header-badge">$12.000.000</div>
+                <h3>Descubrimiento y generación de demanda</h3>
+                <div class="panel-grid">
+                  <div class="panel-box"><h4>Rol</h4><p>Abrir demanda joven, alimentar audiencias de video y generar leads desde formatos nativos.</p></div>
+                  <div class="panel-box"><h5>CPL ref.</h5><p>Referencia eficiente para descubrimiento y generación de leads.</p></div>
+                  <div class="panel-box"><h5>Uso táctico</h5><p>Demanda por programa con Instant Forms y refuerzos nativos.</p></div>
+                  <div class="panel-box"><h5>Creatividad</h5><p>Videos tipo “un día estudiando”, salida laboral, mitos del programa y razones para inscribirse.</p></div>
+                </div>
+              </div>
+              <div class="mix-panel" id="mix-branding">
+                <div class="panel-header-badge">$20.000.000</div>
+                <h3>Presencia territorial y recordación</h3>
+                <div class="panel-grid">
+                  <div class="panel-box"><h4>Formato</h4><p>DOOH $14,0M · Spotify $6,0M.</p></div>
+                  <div class="panel-box"><h5>Intensidad</h5><p>Mayor agresividad en mayo y junio para anticipar la toma de decisión.</p></div>
+                  <div class="panel-box"><h5>Rol DOOH</h5><p>Visibilidad en centros comerciales cercanos a zonas de influencia.</p></div>
+                  <div class="panel-box"><h5>Rol Spotify</h5><p>Audio digital para ampliar frecuencia y recordación en momentos de escucha.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="source-note">Nota: CPL, leads e inversión por programa tomados del nuevo flow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Inversión mensual">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Mes a mes</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Nueva distribución de presupuesto</p>
+            <p class="body-text">El flow vigente conserva branding mensual de abril a agosto y define los totales de performance por medio para todo el periodo.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="month-visual" aria-label="Distribución visual por mes">
+            <div class="month-card"><h3>Abril</h3><div class="month-total">$2,0M</div><div class="stack"><span class="meta" style="--h:0%"></span><span class="google" style="--h:0%"></span><span class="tiktok" style="--h:0%"></span><span class="brand" style="--h:100%"></span></div></div>
+            <div class="month-card"><h3>Mayo</h3><div class="month-total">$52,6M</div><div class="stack"><span class="meta" style="--h:62%"></span><span class="google" style="--h:18%"></span><span class="tiktok" style="--h:7%"></span><span class="brand" style="--h:13%"></span></div></div>
+            <div class="month-card"><h3>Junio</h3><div class="month-total">$58,2M</div><div class="stack"><span class="meta" style="--h:63%"></span><span class="google" style="--h:18%"></span><span class="tiktok" style="--h:7%"></span><span class="brand" style="--h:12%"></span></div></div>
+            <div class="month-card"><h3>Julio</h3><div class="month-total">$46,7M</div><div class="stack"><span class="meta" style="--h:67%"></span><span class="google" style="--h:19%"></span><span class="tiktok" style="--h:8%"></span><span class="brand" style="--h:6%"></span></div></div>
+            <div class="month-card"><h3>Agosto</h3><div class="month-total">$9,5M</div><div class="stack"><span class="meta" style="--h:64%"></span><span class="google" style="--h:18%"></span><span class="tiktok" style="--h:7%"></span><span class="brand" style="--h:11%"></span></div></div>
+          </div>
+          <div class="legend" style="grid-template-columns:repeat(4,auto); justify-content:start; gap:18px; margin-bottom:18px">
+            <div class="legend-row" style="grid-template-columns:14px auto"><span class="dot"></span><span>Meta</span></div>
+            <div class="legend-row" style="grid-template-columns:14px auto"><span class="dot black"></span><span>Google</span></div>
+            <div class="legend-row" style="grid-template-columns:14px auto"><span class="dot gray"></span><span>TikTok</span></div>
+            <div class="legend-row" style="grid-template-columns:14px auto"><span class="dot lightgray"></span><span>Branding</span></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Medio</th><th class="right">Total flow</th><th>Lectura</th></tr></thead>
+              <tbody>
+                <tr><td>Meta Ads</td><td class="right"><strong>$107,0M</strong></td><td>Performance distribuido por programa.</td></tr>
+                <tr><td>Google Ads</td><td class="right"><strong>$30,0M</strong></td><td>Performance distribuido por programa.</td></tr>
+                <tr><td>TikTok Ads</td><td class="right"><strong>$12,0M</strong></td><td>Performance distribuido por programa.</td></tr>
+                <tr><td>Branding</td><td class="right"><strong>$20,0M</strong></td><td>DOOH y Spotify segun calendario mensual del flow.</td></tr>
+                <tr><td><strong>Total</strong></td><td class="right"><strong>$169,0M</strong></td><td>Presupuesto total del flow vigente.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap" style="margin-top:18px">
+            <table>
+              <thead><tr><th>Mes</th><th class="right">DOOH</th><th class="right">Spotify Ads</th><th class="right">Total branding</th><th>Lectura</th></tr></thead>
+              <tbody>
+                <tr><td>Abril</td><td class="right">$1,4M</td><td class="right">$0,6M</td><td class="right">$2,0M</td><td>Arranque de presencia territorial y digital.</td></tr>
+                <tr><td>Mayo</td><td class="right">$4,9M</td><td class="right">$2,1M</td><td class="right">$7,0M</td><td>Pico de consideración antes de la decisión.</td></tr>
+                <tr><td>Junio</td><td class="right">$4,9M</td><td class="right">$2,1M</td><td class="right">$7,0M</td><td>Continuidad agresiva antes del cierre de decisión.</td></tr>
+                <tr><td>Julio</td><td class="right">$2,1M</td><td class="right">$0,9M</td><td class="right">$3,0M</td><td>Refuerzo táctico para remarketing y recordación.</td></tr>
+                <tr><td>Agosto</td><td class="right">$0,7M</td><td class="right">$0,3M</td><td class="right">$1,0M</td><td>Presencia residual para cierre.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Proyección de resultados">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Proyección</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Leads y matrículas estimadas</p>
+            <p class="body-text">La proyección consolida los leads por programa del flow. Branding no se atribuye como lead directo, sino como soporte de demanda y recordación.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="projection-visual">
+            <div class="lead-card-grid">
+              <div class="lead-metric"><strong>35.556</strong><span>Leads estimados</span></div>
+              <div class="lead-metric"><strong>1.778</strong><span>Matrículas al 5%</span></div>
+              <div class="lead-metric"><strong>2.133</strong><span>Matrículas al 6%</span></div>
+            </div>
+            <div class="funnel-mini">
+              <h3 style="margin-bottom:10px">Lectura de conversión</h3>
+              <div class="funnel-step">Leads generados · 35.556</div>
+              <div class="funnel-step s2">Contactados / calificados</div>
+              <div class="funnel-step s3">Inscritos en proceso</div>
+              <div class="funnel-step s4">Matrículas</div>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Fuente</th><th class="right">Leads estimados</th><th class="right">Matrículas 5%</th><th class="right">Matrículas 6%</th><th class="right">Meta matrículas flow</th><th>Lectura</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Flow programas</strong></td><td class="right"><strong>35.556</strong></td><td class="right"><strong>1.778</strong></td><td class="right"><strong>2.133</strong></td><td class="right"><strong>3.200</strong></td><td>Consolidado de los 29 programas del flow vigente.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout" style="margin-top:20px">
+            <h3>Condición de cumplimiento</h3>
+            <p>El escenario de matrículas depende de contactabilidad, velocidad de respuesta, intensidad comercial, calidad de base y claridad del proceso de admisión. La pauta puede optimizar CPL, pero el resultado final se consolida cuando el lead avanza comercialmente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Buyer personas y segmentaciones">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Audiencias</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Buyer personas + segmentación operativa</p>
+            <p class="body-text">La caracterización muestra una base mayoritariamente joven, de estratos 2 y 3, con interés en empleabilidad, continuidad formativa y fortalecimiento de competencias.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="cards-3">
+            <div class="flat-card">
+              <span class="tag green">Core joven</span>
+              <h3>“Quiero empezar a trabajar rápido”</h3>
+              <p>15 a 23 años, recién egresado o en transición, busca una opción técnica concreta, cercana y con salida laboral.</p>
+              <ul><li>Meta/TikTok por intereses vocacionales.</li><li>Mensajes: empleabilidad, duración, práctica, cercanía.</li><li>Programas: software, diseño, gastronomía, salud.</li></ul>
+              <div class="bp-audiences">
+                <div class="bp-aud-title">Programática · Third-party data</div>
+                <div class="bp-aud-rows">
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Lotame</span><div class="bp-aud-pills"><span>Technology Learners</span><span>Online Learning</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">OnAudience</span><div class="bp-aud-pills"><span>Training &amp; Courses</span><span>Technology Learners</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Trade Desk</span><div class="bp-aud-pills"><span>Technical Training</span><span>Online Learning</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Comscore</span><div class="bp-aud-pills"><span>Technical Training Content</span><span>Education Content Visitors</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Amazon DSP</span><div class="bp-aud-pills"><span>Technology Interest</span><span>Education Interest</span></div></div>
+                </div>
+                <p class="bp-aud-claim">Jóvenes con intención formativa técnica identificada por comportamiento y consumo de contenido educativo en plataformas digitales.</p>
+              </div>
+            </div>
+            <div class="flat-card">
+              <span class="tag light">Trabajador aspiracional</span>
+              <h3>“Necesito mejorar mi perfil”</h3>
+              <p>24 a 35 años, empleado o independiente, con necesidad de ascenso, estabilidad o cambio laboral.</p>
+              <ul><li>Google Search por intención.</li><li>Meta con mensajes de flexibilidad y progreso.</li><li>Programas: administrativo, contaduría, talento humano, mercadeo.</li></ul>
+              <div class="bp-audiences">
+                <div class="bp-aud-title">Programática · Third-party data</div>
+                <div class="bp-aud-rows">
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Lotame</span><div class="bp-aud-pills"><span>Career Advancement</span><span>Professional Training</span><span>Certification Seekers</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">OnAudience</span><div class="bp-aud-pills"><span>Career Development</span><span>Professional Development</span><span>Business Studies</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Trade Desk</span><div class="bp-aud-pills"><span>Career Advancement</span><span>Professional Development</span><span>Certification Seekers</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Comscore</span><div class="bp-aud-pills"><span>Career Education Content</span><span>Employment Content</span><span>Business Education Content</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Amazon DSP</span><div class="bp-aud-pills"><span>Career Development</span><span>Business &amp; Professional Services</span><span>Entrepreneurship Interest</span></div></div>
+                </div>
+                <p class="bp-aud-claim">Adultos activos laboralmente con historial de consumo profesional, búsqueda de certificación y señales de ascenso o cambio de rol.</p>
+              </div>
+            </div>
+            <div class="flat-card">
+              <span class="tag gray">Reorientación / segunda oportunidad</span>
+              <h3>“Quiero retomar o cambiar de camino”</h3>
+              <p>30+ años, algunos con hijos o responsabilidades del hogar, busca una opción viable y confiable.</p>
+              <ul><li>Search + remarketing.</li><li>Mensajes: acompañamiento, confianza, horarios, retorno de inversión.</li><li>Programas: salud, comercio, administración, logística.</li></ul>
+              <div class="bp-audiences">
+                <div class="bp-aud-title">Programática · Third-party data</div>
+                <div class="bp-aud-rows">
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Lotame</span><div class="bp-aud-pills"><span>Career Advancement</span><span>Job Seekers</span><span>Online Learning</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">OnAudience</span><div class="bp-aud-pills"><span>Career Development</span><span>Professional Development</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Trade Desk</span><div class="bp-aud-pills"><span>Continuing Education</span><span>Career Advancement</span><span>Professional Development</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Comscore</span><div class="bp-aud-pills"><span>Career Education Content</span><span>Employment Content</span></div></div>
+                  <div class="bp-aud-row"><span class="bp-aud-prov">Amazon DSP</span><div class="bp-aud-pills"><span>Career Development</span><span>Online Learning</span></div></div>
+                </div>
+                <p class="bp-aud-claim">Adultos con historial de exploración educativa online, búsqueda laboral activa e intención de reorientar su trayectoria profesional.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bp-providers-note">
+            <strong>¿Qué son estos proveedores?</strong> Lotame, OnAudience, The Trade Desk, Comscore/Proximic y Amazon DSP son plataformas de datos de terceros (DMPs / DSPs) que construyen audiencias a partir de comportamiento de navegación, consumo de contenido e intención declarada a escala global. Sus segmentos se activan directamente en campañas programáticas de display, video y audio sin depender de datos propios del anunciante.
+          </div>
+          <div class="journey-container">
+            <div class="acc-item open">
+              <div class="acc-header" onclick="toggleAcc(this)">Segmentaciones recomendadas por plataforma <span class="acc-icon">−</span></div>
+              <div class="acc-content">
+                <div class="j-grid">
+                  <div class="j-box"><h4>Meta Ads</h4><p>Intereses por programa, sedes, colegios, empleabilidad, educación técnica y audiencias similares a matriculados.</p></div>
+                  <div class="j-box"><h5>TikTok Ads</h5><p>Contenido vocacional, vida estudiantil, creatividad, tecnología, gastronomía y salud con Instant Forms.</p></div>
+                  <div class="j-box"><h5>Google Ads</h5><p>Búsquedas “programa técnico”, “estudiar auxiliar…”, “técnico laboral en…”, “CESDE programa…”.</p></div>
+                  <div class="j-box"><h5>CRM / Remarketing</h5><p>Formularios abiertos, visitantes web, leads no contactados, bases por programa y audiencias de video.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="source-note">Base de caracterización usada: estudiantes nuevos 2025-2; principales rangos 18-23, 24-29 y 30-35; predominancia de estratos 2 y 3; expectativas enfocadas en fortalecer competencias laborales y continuar formación.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Ruta DOOH">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>DOOH</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Pantallas priorizadas y corredor territorial</p>
+            <p class="body-text">El mapa concentra puntos de alto tráfico en Bello, Medellín, Itagüí y Rionegro para apoyar reconocimiento de marca y cercanía a zonas de influencia.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="map-layout">
+            <div id="doohMap"></div>
+            <div class="map-side">
+              <div>
+                <h3>Ubicaciones sugeridas</h3>
+                <ul class="map-list"><li>Centro Comercial Puerta del Norte - Bello</li><li>Centro Comercial Fabricato - Bello</li><li>Estación Metro Niquía - Bello</li><li>Terminal del Norte - Medellín</li><li>Florida Parque Comercial - Medellín</li><li>Centro Comercial La Central - Medellín</li><li>Centro Comercial Los Molinos - Medellín</li><li>Centro Comercial Premium Plaza - Medellín</li><li>Centro Comercial Aventura - Medellín</li><li>Centro Comercial El Tesoro - Medellín</li><li>Estación Metro Acevedo - Medellín</li><li>Estación Metro San Antonio - Medellín</li><li>Centro Comercial Mayorca - Itagüí</li><li>Centro Comercial San Nicolás - Rionegro</li></ul>
+              </div>
+              <div>
+                <a class="map-btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Centro+Comercial+Puerta+del+Norte+Bello&destination=Centro+Comercial+San+Nicolas+Rionegro&waypoints=Centro+Comercial+Fabricato+Bello%7CEstacion+Metro+Niquia+Bello%7CTerminal+del+Norte+Medellin%7CFlorida+Parque+Comercial+Medellin%7CCentro+Comercial+La+Central+Medellin%7CCentro+Comercial+Los+Molinos+Medellin%7CCentro+Comercial+Premium+Plaza+Medellin%7CCentro+Comercial+Aventura+Medellin%7CCentro+Comercial+El+Tesoro+Medellin%7CEstacion+Metro+Acevedo+Medellin%7CEstacion+Metro+San+Antonio+Medellin%7CCentro+Comercial+Mayorca+Itagui">Abrir referencia en Google Maps</a>
+                <p class="source-note">Para embeber un mapa 100% Google con todos los pines, se recomienda crear un Google My Maps y pegar aquí el iframe. Este HTML usa mapa interactivo con pines y salida a Google Maps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Priorización de programas">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Programas</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Meta, prioridad, inversión y CPL</p>
+            <p class="body-text">La inversión de performance se distribuye por programa con $149M entre Meta, Google y TikTok, donde Meta concentra la diferenciación por sede y oferta.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="program-controls">
+            <button class="filter-btn active" onclick="filterPrograms('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterPrograms('P1', this)">Prioridad P1</button>
+            <button class="filter-btn" onclick="filterPrograms('P2', this)">Prioridad P2</button>
+            <button class="filter-btn" onclick="filterPrograms('P3', this)">Prioridad P3</button>
+          </div>
+          <div class="priority-strip"><span title="P1"></span><span title="P2"></span><span title="P3"></span></div>
+          <div class="stats-grid three" style="margin-bottom:20px">
+            <div class="stat-card"><span class="stat-val">P1</span><span class="stat-label">Escalar volumen</span><span class="stat-note">Mayor meta, mayor capacidad y mayor potencial digital.</span></div>
+            <div class="stat-card"><span class="stat-val">P2</span><span class="stat-label">Captura eficiente</span><span class="stat-note">Programas relevantes con inversión controlada.</span></div>
+            <div class="stat-card"><span class="stat-val">P3</span><span class="stat-label">Activación táctica</span><span class="stat-note">Cupos limitados, nichos o metas menores.</span></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Escuela / sede</th><th>Programa</th><th class="right">Meta</th><th>Prioridad</th><th class="right">Inversion estimada</th><th class="right">CPL ref.</th><th class="right">Leads estimados</th><th>Medios sugeridos</th><th class="center">Vigente Meta</th></tr></thead>
+              <tbody>
+                <tr data-priority="P1"><td>Medellín</td><td>Técnico Laboral como Asistente como Desarrollo de Software</td><td class="right">315</td><td><span class="tag green">P1</span></td><td class="right">$14,6M</td><td class="right">$4.174</td><td class="right">3.500</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill warn">No</span></td></tr>
+                <tr data-priority="P1"><td>Medellín</td><td>Técnico Laboral como Asistente Administrativo</td><td class="right">210</td><td><span class="tag green">P1</span></td><td class="right">$9,8M</td><td class="right">$4.192</td><td class="right">2.333</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P1"><td>Medellín</td><td>Técnico Laboral como Asistente en Diseño Gráfico</td><td class="right">210</td><td><span class="tag green">P1</span></td><td class="right">$9,8M</td><td class="right">$4.192</td><td class="right">2.333</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P1"><td>Medellín</td><td>Técnico Laboral en Arte Culinario</td><td class="right">208</td><td><span class="tag green">P1</span></td><td class="right">$9,7M</td><td class="right">$4.189</td><td class="right">2.311</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P1"><td>Medellín</td><td>Técnico Laboral en Pastelería y Arte Dulce</td><td class="right">182</td><td><span class="tag green">P1</span></td><td class="right">$8,5M</td><td class="right">$4.194</td><td class="right">2.022</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P1"><td>Medellín</td><td>Técnico Laboral como Asistente en Contaduría</td><td class="right">175</td><td><span class="tag green">P1</span></td><td class="right">$8,2M</td><td class="right">$4.192</td><td class="right">1.944</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P1"><td>Medellín</td><td>Técnico Laboral en Auxiliar en Enfermería</td><td class="right">150</td><td><span class="tag green">P1</span></td><td class="right">$7,0M</td><td class="right">$4.193</td><td class="right">1.667</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P1"><td>Medellín</td><td>Técnico Laboral en Auxiliar de Talento Humano</td><td class="right">140</td><td><span class="tag green">P1</span></td><td class="right">$6,5M</td><td class="right">$4.190</td><td class="right">1.556</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P2"><td>Bello</td><td>Técnico Laboral en Asistente Administrativo</td><td class="right">120</td><td><span class="tag light">P2</span></td><td class="right">$5,6M</td><td class="right">$4.194</td><td class="right">1.333</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P2"><td>Bello</td><td>Técnico Laboral en Asistente en Desarrollo de Software</td><td class="right">90</td><td><span class="tag light">P2</span></td><td class="right">$4,2M</td><td class="right">$4.200</td><td class="right">1.000</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P2"><td>Medellín</td><td>Técnico Laboral como Asistente en Comercio Internacional</td><td class="right">120</td><td><span class="tag light">P2</span></td><td class="right">$5,6M</td><td class="right">$4.194</td><td class="right">1.333</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P2"><td>Medellín</td><td>Técnico Laboral como Asistente en Mercadeo</td><td class="right">105</td><td><span class="tag light">P2</span></td><td class="right">$4,9M</td><td class="right">$4.190</td><td class="right">1.167</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P2"><td>Medellín</td><td>Técnico Laboral en Auxiliar Administrativo en Salud</td><td class="right">105</td><td><span class="tag light">P2</span></td><td class="right">$4,9M</td><td class="right">$4.190</td><td class="right">1.167</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P2"><td>Medellín</td><td>Técnico Laboral en Auxiliar en Servicios Farmacéuticos</td><td class="right">105</td><td><span class="tag light">P2</span></td><td class="right">$4,9M</td><td class="right">$4.190</td><td class="right">1.167</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P2"><td>Medellín</td><td>Técnico Laboral como Asistente en Producción Audiovisual</td><td class="right">90</td><td><span class="tag light">P2</span></td><td class="right">$4,2M</td><td class="right">$4.200</td><td class="right">1.000</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P2"><td>Medellín</td><td>Técnico Laboral como Auxiliar en Publicación de Contenidos Digitales</td><td class="right">90</td><td><span class="tag light">P2</span></td><td class="right">$4,2M</td><td class="right">$4.200</td><td class="right">1.000</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P2"><td>Rionegro</td><td>Técnico Laboral como Auxiliar Administrativo</td><td class="right">90</td><td><span class="tag light">P2</span></td><td class="right">$4,2M</td><td class="right">$4.200</td><td class="right">1.000</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Bello</td><td>Técnico Laboral en Asistente en Diseño Gráfico</td><td class="right">60</td><td><span class="tag gray">P3</span></td><td class="right">$2,8M</td><td class="right">$4.183</td><td class="right">667</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Medellín</td><td>Técnico Laboral como Asistente en Electromecánica</td><td class="right">75</td><td><span class="tag gray">P3</span></td><td class="right">$3,5M</td><td class="right">$4.190</td><td class="right">833</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Medellín</td><td>Técnico Laboral como Asistente Administrativo-Fast Track</td><td class="right">70</td><td><span class="tag gray">P3</span></td><td class="right">$3,3M</td><td class="right">$4.190</td><td class="right">778</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Medellín</td><td>Técnico Laboral como Asistente como Desarrollo de Software- Fast Track</td><td class="right">70</td><td><span class="tag gray">P3</span></td><td class="right">$3,3M</td><td class="right">$4.190</td><td class="right">778</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Medellín</td><td>Técnico Laboral en Soporte de Sistemas Informáticos</td><td class="right">70</td><td><span class="tag gray">P3</span></td><td class="right">$3,3M</td><td class="right">$4.190</td><td class="right">778</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Medellín</td><td>Técnico Laboral como Asistente en Diseño de Modas</td><td class="right">50</td><td><span class="tag gray">P3</span></td><td class="right">$2,3M</td><td class="right">$4.191</td><td class="right">556</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Medellín</td><td>Técnico Laboral como Asistente en Producción Fotográfica</td><td class="right">50</td><td><span class="tag gray">P3</span></td><td class="right">$2,3M</td><td class="right">$4.191</td><td class="right">556</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Medellín</td><td>Técnico Laboral como Asistente en Desarrollo de Software (D)</td><td class="right">35</td><td><span class="tag gray">P3</span></td><td class="right">$1,6M</td><td class="right">$4.190</td><td class="right">389</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Medellín</td><td>Técnico Laboral como Asistente en Logística de Centros de Distribución</td><td class="right">35</td><td><span class="tag gray">P3</span></td><td class="right">$1,6M</td><td class="right">$4.190</td><td class="right">389</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Rionegro</td><td>Técnico Laboral como Auxiliar en Diseño Gráfico</td><td class="right">75</td><td><span class="tag gray">P3</span></td><td class="right">$3,5M</td><td class="right">$4.190</td><td class="right">833</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Rionegro</td><td>Técnico Laboral en Auxiliar en Análisis y Desarrollo de Software</td><td class="right">75</td><td><span class="tag gray">P3</span></td><td class="right">$3,5M</td><td class="right">$4.190</td><td class="right">833</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr data-priority="P3"><td>Rionegro</td><td>Técnico Laboral en Auxiliar en Comercio Internacional</td><td class="right">30</td><td><span class="tag gray">P3</span></td><td class="right">$1,4M</td><td class="right">$4.204</td><td class="right">333</td><td>Meta 72% &middot; Google 20% &middot; TikTok 8%</td><td class="center"><span class="status-pill ok">Si</span></td></tr>
+                <tr><td colspan="4"><strong>Total performance distribuido</strong></td><td class="right"><strong>$141,0M</strong></td><td class="right">$3.965</td><td class="right"><strong>35.556</strong></td><td>Flow vigente de programas.</td><td class="center">-</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="source-note">Vista ejecutiva de líneas principales; el detalle completo de los 30 programas queda en el flow interactivo siguiente. Branding se mantiene como soporte transversal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Flow inversión por programa">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Flow final</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Inversión por programa, sede y medio</p>
+            <p class="body-text">Vista operativa para leer el esfuerzo de pauta por programa: inversión, reparto entre Meta, Google y TikTok, leads proyectados, CPL estimado y vigencia en Meta.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="flow-summary">
+            <div class="flow-kpi"><span>Inversión visible</span><strong id="flowTotalInv">$0M</strong></div>
+            <div class="flow-kpi"><span>Leads estimados</span><strong id="flowTotalLeads">0</strong></div>
+            <div class="flow-kpi"><span>CPL promedio</span><strong id="flowAvgCpl">$0</strong></div>
+            <div class="flow-kpi"><span>Líneas activas</span><strong id="flowCount">0</strong></div>
+          </div>
+          <div class="flow-shell">
+            <aside class="flow-sidebar">
+              <h3>Filtros de lectura</h3>
+              <div class="flow-control"><label>Buscar programa o sede</label><input id="flowSearch" type="search" placeholder="Ej. Software, Bello, Salud" oninput="renderFlow()"></div>
+              <div class="flow-control"><label>Prioridad</label><select id="flowPriority" onchange="renderFlow()"><option value="all">Todas</option><option value="P1">P1 · Alta presión</option><option value="P2">P2 · Captura eficiente</option><option value="P3">P3 · Soporte táctico</option></select></div>
+              <div class="flow-control"><label>Sede / escuela</label><select id="flowSede" onchange="renderFlow()"><option value="all">Todas</option></select></div>
+              <div class="flow-control"><label>Medio dominante</label><select id="flowDominant" onchange="renderFlow()"><option value="all">Todos</option><option value="Meta">Meta</option><option value="Google">Google</option><option value="TikTok">TikTok</option></select></div>
+              <div class="mini-legend"><span class="mini-pill">P1 = mayor empuje</span><span class="mini-pill">P2 = eficiencia</span><span class="mini-pill">P3 = soporte</span></div>
+            </aside>
+            <div class="flow-board">
+              <div class="flow-head"><div>Programa / sede</div><div>Inversion</div><div>Medios</div><div style="text-align:right">Leads</div><div style="text-align:right">CPL</div><div style="text-align:center">Vigente</div></div>
+              <div id="flowRows"></div>
+            </div>
+          </div>
+          <p class="source-note">Lectura sugerida: usar los filtros durante la presentación para comparar programas, sedes y medio dominante sin duplicar tablas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Flow branding">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Flow branding</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">DOOH + Spotify como capa de demanda</p>
+            <p class="body-text">Lectura final del esfuerzo de branding: inversión por formato, presión mensual y zonas/pantallas priorizadas para acompañar la captación de leads.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="brandflow-layout">
+            <aside class="brandflow-sidebar">
+              <h3>Filtros de lectura</h3>
+              <div class="flow-control"><label>Mes</label><select id="brandMonth" onchange="renderBrandFlow()"><option value="all">Todos</option><option>Abril</option><option>Mayo</option><option>Junio</option><option>Julio</option><option>Agosto</option></select></div>
+              <div class="flow-control"><label>Formato</label><select id="brandFormat" onchange="renderBrandFlow()"><option value="all">Todos</option><option value="DOOH">DOOH</option><option value="Spotify">Spotify</option></select></div>
+              <div class="flow-control"><label>Zona</label><select id="brandZone" onchange="renderBrandFlow()"><option value="all">Todas</option><option>Bello</option><option>Medellín</option><option>Itagüí</option><option>Rionegro</option></select></div>
+              <p><strong>Rol:</strong> aumentar recordación y cercanía territorial en zonas de influencia, mientras performance convierte el interés en leads.</p>
+              <div class="brand-chip-row"><span class="brand-chip">$14,0M DOOH</span><span class="brand-chip">$6,0M Spotify</span></div>
+            </aside>
+            <div class="brandflow-board">
+              <div class="brandflow-kpis">
+                <div class="brandflow-kpi"><span>Inversion branding</span><strong id="brandTotal">$20,0M</strong></div>
+                <div class="brandflow-kpi"><span>DOOH</span><strong id="brandDooh">$14,0M</strong></div>
+                <div class="brandflow-kpi"><span>Spotify</span><strong id="brandSpotify">$6,0M</strong></div>
+              </div>
+              <div class="brandflow-grid">
+                <div class="brand-card">
+                  <h3>Presión mensual por formato</h3>
+                  <div id="brandMonthRows"></div>
+                  <div class="brand-chip-row"><span class="brand-chip"><span class="dot"></span> DOOH</span><span class="brand-chip"><span class="dot spotify"></span> Spotify</span></div>
+                </div>
+                <div class="brand-card">
+                  <h3>Pantallas / zonas</h3>
+                  <div class="brandflow-list" id="brandScreenRows"></div>
+                </div>
+              </div>
+              <div class="brand-card">
+                <h3>Uso del branding dentro del ecosistema</h3>
+                <div class="touchpoint-map">
+                  <div class="touchpoint"><h4>1. Reconocimiento</h4><p>DOOH activa presencia física cerca de zonas de estudio, compra, transporte y tránsito frecuente.</p></div>
+                  <div class="touchpoint"><h4>2. Consideración</h4><p>Spotify refuerza frecuencia en audio con audiencias jóvenes, padres/apoyadores y usuarios en exploración educativa.</p></div>
+                  <div class="touchpoint"><h4>3. Captura</h4><p>Performance capitaliza la demanda generada con mensajes por programa, sede y beneficio.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="source-note">Branding no se atribuye como lead directo: funciona como capa de recordación, alcance territorial y soporte de conversión para Meta, Google y TikTok.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Siguientes pasos">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Siguientes pasos</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Cierre operativo para activar la ruta</p>
+            <p class="body-text">Acciones necesarias para pasar de la planeación a implementación, medición y optimización.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-number">01</div><h3>Definir pantallas DOOH</h3><p>Validar disponibilidad, formatos, fechas de pauta, frecuencia estimada y cobertura por centro comercial/zona de influencia.</p></div>
+            <div class="step-card"><div class="step-number">02</div><h3>Desarrollar materiales</h3><p>Adaptar piezas para DOOH, Spotify, Meta, Google y TikTok con mensajes por programa, sede y momento del funnel.</p></div>
+            <div class="step-card"><div class="step-number">03</div><h3>Validar landing</h3><p>Revisar velocidad, formularios, trazabilidad, UTMs, thank you page, eventos y campos necesarios para gestión comercial.</p></div>
+            <div class="step-card"><div class="step-number">04</div><h3>Configurar medición</h3><p>Asegurar píxeles, conversiones, audiencias, remarketing, nomenclaturas, dashboard y tablero de seguimiento por programa.</p></div>
+            <div class="step-card"><div class="step-number">05</div><h3>Activar plan por oleadas</h3><p>Iniciar con presión en mayo-junio para branding y mantener always-on de performance según prioridad de programas.</p></div>
+            <div class="step-card"><div class="step-number">06</div><h3>Optimizar con comercial</h3><p>Cruzar leads, contacto efectivo, matrícula y capacidad por grupo para mover inversión hacia programas con mejor CAC real.</p></div>
+          </div>
+          <div class="next-note">
+            <div class="callout-mini"><h3>Decisiones requeridas</h3><p>Listado final de pantallas, artes aprobados, oferta/mensaje por programa y confirmación de capacidad comercial por sede.</p></div>
+            <div class="callout-mini"><h3>Primer corte recomendado</h3><p>Revisión a los 7-10 días de activación para ajustar CPL, calidad de lead, distribución por medio y programas con mayor tracción.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">Anterior</button>
+    <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Siguiente</button>
+  </div>
+  <div class="slide-counter" id="slideCounter"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../assets/js/ruta.js"></script>
+</body>
+</html>

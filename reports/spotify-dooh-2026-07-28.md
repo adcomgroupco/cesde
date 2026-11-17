@@ -1,7 +1,7 @@
 # CESDE - Gestion Spotify y DOOH (jun-jul 2026)
 
 Campana: **CESDE | Matriculas**. Informe breve de medios de alcance.
-HTML: `pages/reporte-spotify-dooh-jun-jul.html`.
+HTML: `informes/spotify-y-pantallas-2026-06-a-07.html`.
 
 ## Consolidado
 
