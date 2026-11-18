@@ -88,6 +88,7 @@ carpetas temáticas y se enlazan desde la portada.
 | [Anuncios de Empresas · 1 septiembre 2026](empresas/anuncios-2026-09-01.html) | `empresas/anuncios-2026-09-01.html` |
 | [Anuncios de Empresas · 16 septiembre 2026](empresas/anuncios-2026-09-16.html) | `empresas/anuncios-2026-09-16.html` |
 | [Anuncios de Empresas · 30 octubre 2026](empresas/anuncios-2026-10-30.html) | `empresas/anuncios-2026-10-30.html` |
+| [Prueba de logo en Empresas · 17 noviembre 2026](empresas/prueba-logo-aliado-2026-11-17.html) | `empresas/prueba-logo-aliado-2026-11-17.html` |
 | [Plan de Microcredenciales · 2026](microcredenciales/plan-2026.html) | `microcredenciales/plan-2026.html` |
 | [Resultados de Microcredenciales · 8 octubre 2026](microcredenciales/resultados-2026-10-08.html) | `microcredenciales/resultados-2026-10-08.html` |
 | [Anuncios de Microcredenciales · 8 octubre 2026](microcredenciales/anuncios-2026-10-08.html) | `microcredenciales/anuncios-2026-10-08.html` |
