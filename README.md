@@ -79,6 +79,7 @@ carpetas temáticas y se enlazan desde la portada.
 | [Anuncios de extensión · 5 agosto 2026](tecnicos/anuncios-extension-2026-08-05.html) | `tecnicos/anuncios-extension-2026-08-05.html` |
 | [Anuncios generales · 9 octubre 2026](tecnicos/anuncios-generales-2026-10-09.html) | `tecnicos/anuncios-generales-2026-10-09.html` |
 | [Anuncios por programa · 19 octubre 2026](tecnicos/anuncios-programas-2026-10-19.html) | `tecnicos/anuncios-programas-2026-10-19.html` |
+| [Becas Comfama 2027-1 · 18 noviembre 2026](tecnicos/becas-comfama-2026-11-18.html) | `tecnicos/becas-comfama-2026-11-18.html` |
 | [Calidad de contactos · Agosto 2026](empresas/calidad-2026-08.html) | `empresas/calidad-2026-08.html` |
 | [Contactos de Empresas · Septiembre 2026](empresas/contactos-2026-09.html) | `empresas/contactos-2026-09.html` |
 | [Creatividades de Empresas · Octubre 2026](empresas/creatividades-2026-10.html) | `empresas/creatividades-2026-10.html` |
