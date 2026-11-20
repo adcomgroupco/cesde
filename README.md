@@ -94,6 +94,7 @@ carpetas temáticas y se enlazan desde la portada.
 | [Resultados de Microcredenciales · 8 octubre 2026](microcredenciales/resultados-2026-10-08.html) | `microcredenciales/resultados-2026-10-08.html` |
 | [Anuncios de Microcredenciales · 8 octubre 2026](microcredenciales/anuncios-2026-10-08.html) | `microcredenciales/anuncios-2026-10-08.html` |
 | [Anuncios de gastronomía · 11 noviembre 2026](educon/anuncios-gastronomia-2026-11-11.html) | `educon/anuncios-gastronomia-2026-11-11.html` |
+| [Videos de gastronomía · 20 noviembre 2026](educon/videos-gastronomia-2026-11-20.html) | `educon/videos-gastronomia-2026-11-20.html` |
 | [Plan de sostenimiento · Septiembre 2026](planes/sostenimiento-2026-09.html) | `planes/sostenimiento-2026-09.html` |
 | [Prueba en ChatGPT Ads · Noviembre 2026](planes/chatgpt-ads-2026-11.html) | `planes/chatgpt-ads-2026-11.html` |
 | [Gestión de Empresas, Técnicos y CRM · Noviembre 2026](informes/gestion-2026-11.html) | `informes/gestion-2026-11.html` |
