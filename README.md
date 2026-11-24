@@ -70,6 +70,7 @@ carpetas temáticas y se enlazan desde la portada.
 | [Seguimiento semanal](tableros/seguimiento.html) | `tableros/seguimiento.html` |
 | [Plan de Técnicos · 2026-2](tecnicos/plan-2026-2.html) | `tecnicos/plan-2026-2.html` |
 | [Plan de Técnicos · 2027-1](tecnicos/plan-2027-1.html) | `tecnicos/plan-2027-1.html` |
+| [Ajuste por cumplimiento de metas · 24 noviembre 2026](tecnicos/ajuste-cumplimiento-2026-11-24.html) | `tecnicos/ajuste-cumplimiento-2026-11-24.html` |
 | [Historial de pauta · 2026-2](tecnicos/historial-2026-2.html) | `tecnicos/historial-2026-2.html` |
 | [Creatividades de Técnicos · 2026-2](tecnicos/creatividades-2026-2.html) | `tecnicos/creatividades-2026-2.html` |
 | [TikTok de Técnicos · Mayo a julio 2026](tecnicos/tiktok-2026-05-a-07.html) | `tecnicos/tiktok-2026-05-a-07.html` |
