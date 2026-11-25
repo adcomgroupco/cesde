@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gestión de la campaña de Becas Comfama 2027-1 en Meta durante su primera semana, del 18 al 24 de noviembre de 2026.">
+  <title>CESDE | Becas Comfama 2027-1 · Gestión al 24 noviembre 2026</title>
+  <link rel="stylesheet" href="../assets/css/adcom-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/reporte-tecper.css">
+  <link rel="stylesheet" href="../assets/css/reporte-pq.css">
+  <style>
+    .report-hero.compact { min-height: 0; padding-top: 68px; padding-bottom: 68px }
+    .report-hero h1 { font-size: 3.2rem; line-height: 1.1; max-width: 900px }
+    .hero-metrics span { border-radius: 8px }
+    .only-preview { padding-top: 42px }
+    .block { padding-bottom: 34px }
+    .block + .block { border-top: 1px solid #e4e4e4; padding-top: 42px }
+    .bx-grid { display: grid; gap: 16px; margin-top: 22px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)) }
+    .bx-card { background: #fff; border: 1px solid #e4e4e4; border-radius: 8px; padding: 22px }
+    .bx-card h3 { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: #555; margin-bottom: 10px }
+    .bx-card .bx-big { font-size: 2.6rem; font-weight: 700; line-height: 1.05; color: #111 }
+    .bx-card p { margin-top: 8px; font-size: .9rem; line-height: 1.5; color: #444 }
+    .bx-tag { display: inline-block; margin-top: 12px; padding: 3px 10px; border-radius: 99px; font-size: .75rem; font-weight: 700; background: var(--accent, #ffd400); color: #111; border: 1px solid #111 }
+    .bx-pace { position: relative; height: 18px; background: #f1f1ee; border-radius: 3px; margin-top: 18px }
+    .bx-pace i { position: absolute; inset: 0 auto 0 0; background: var(--accent, #ffd400); border-right: 2px solid #111; border-radius: 3px 0 0 3px }
+    .bx-pace b { position: absolute; top: -6px; bottom: -6px; width: 2px; background: #111 }
+    .bx-pace-l { display: flex; justify-content: space-between; gap: 8px; margin-top: 8px; font-size: .75rem; color: #555 }
+    .bx-say { display: grid; gap: 14px; margin-top: 22px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)) }
+    .bx-say div { border-left: 4px solid var(--accent, #ffd400); padding: 4px 0 4px 14px; font-size: .95rem; line-height: 1.55 }
+    .bx-panel { background: #fff; border: 1px solid #e4e4e4; border-radius: 8px; padding: 22px }
+    .bx-panel h3 { font-size: 1rem; margin-bottom: 4px }
+    .bx-panel .sub { font-size: .82rem; color: #555; margin-bottom: 16px }
+    .bx-row { display: grid; grid-template-columns: 84px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 7px 0; font-size: .9rem }
+    .bx-track { position: relative; height: 16px; background: #f1f1ee; border-radius: 3px }
+    .bx-track i { position: absolute; inset: 0 auto 0 0; background: #8a8983; border-right: 2px solid #111; border-radius: 3px 0 0 3px }
+    .bx-track i.is-on { background: var(--accent, #ffd400) }
+    .bx-mark { position: absolute; top: -4px; bottom: -4px; width: 2px; background: #111 }
+    .bx-v { font-weight: 700; white-space: nowrap; text-align: right }
+    .bx-v small { font-weight: 400; color: #555 }
+    .bx-cols { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; height: 200px; margin-top: 6px }
+    .bx-col { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; gap: 4px }
+    .bx-col i { display: block; width: 100%; background: var(--accent, #ffd400); border-top: 3px solid #111; border-radius: 3px 3px 0 0; min-height: 3px }
+    .bx-col.is-part i { background: repeating-linear-gradient(135deg, #fff1a6 0 5px, var(--accent, #ffd400) 5px 10px) }
+    .bx-cv { font-size: .72rem; font-weight: 700; white-space: nowrap }
+    .bx-cv small { font-weight: 400; color: #555; margin-left: 2px }
+    .bx-cl { font-size: .7rem; color: #555; white-space: nowrap }
+    .bx-stack { display: flex; gap: 2px; height: 40px; margin-top: 18px; border-radius: 6px; overflow: hidden }
+    .bx-stack span { display: flex; align-items: center; padding: 0 12px; font-size: .8rem; font-weight: 700; white-space: nowrap; overflow: hidden }
+    .bx-stack .s1 { background: var(--accent, #ffd400); color: #111 }
+    .bx-stack .s2 { background: #555; color: #fff }
+    .bx-stack .s3 { background: #c9c8c2; color: #111 }
+    .bx-pzs { display: grid; gap: 16px; margin-top: 22px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)) }
+    .bx-pz { display: grid; grid-template-rows: 190px auto; background: #fff; border: 1px solid #e4e4e4; border-radius: 8px; overflow: hidden }
+    .bx-pz.is-top { border: 2px solid #111; box-shadow: 4px 4px 0 var(--accent, #ffd400) }
+    .bx-pz img { width: 100%; height: 100%; object-fit: cover; display: block; background: #f1f1ee }
+    .bx-pz > div { padding: 14px 16px 16px }
+    .bx-pz h4 { font-size: .85rem; margin-bottom: 6px }
+    .bx-pz .bx-big { font-size: 1.5rem; font-weight: 700; line-height: 1.1 }
+    .bx-pz p { font-size: .82rem; color: #444; margin-top: 4px }
+    .bx-steps { display: grid; gap: 14px; margin-top: 22px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); counter-reset: paso }
+    .bx-step { background: #fff; border: 1px solid #e4e4e4; border-radius: 8px; padding: 20px 18px 18px; counter-increment: paso }
+    .bx-step::before { content: counter(paso); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent, #ffd400); border: 1px solid #111; font-weight: 700; margin-bottom: 10px }
+    .bx-step h4 { font-size: .95rem; margin-bottom: 6px }
+    .bx-step p { font-size: .85rem; line-height: 1.55; color: #444 }
+    .table-wrap { overflow-x: auto; margin-top: 18px }
+    table.plan { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .9rem }
+    table.plan th, table.plan td { text-align: left; padding: 11px 14px; border-bottom: 1px solid #e4e4e4; vertical-align: top }
+    table.plan th { font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: #555 }
+    table.plan td.num, table.plan th.num { text-align: right; white-space: nowrap }
+    table.plan tr.total td { font-weight: 700; border-top: 2px solid #111 }
+    details.bx-det { margin-top: 18px }
+    details.bx-det summary { cursor: pointer; font-weight: 600; font-size: .9rem }
+    ul.notes { margin: 16px 0 0; padding-left: 20px; line-height: 1.7; max-width: 760px }
+    .back-link { display: inline-block; margin: 34px 0; font-size: .88rem; font-weight: 600 }
+    @media (max-width: 620px) {
+      .report-hero.compact { padding: 42px 22px }
+      .report-hero h1 { font-size: 2.3rem }
+      .hero-metrics span { width: 100% }
+      .bx-row { grid-template-columns: 68px minmax(0, 1fr) }
+      .bx-row .bx-v { grid-column: 1 / -1; text-align: left; padding-left: 80px }
+      .bx-cv { font-size: .62rem }
+      .bx-cv small { display: none }
+      .bx-cols { gap: 4px }
+      table.plan td, table.plan th { padding: 10px 8px }
+    }
+  </style>
+</head>
+<body>
+  <header class="report-hero compact">
+    <div class="hero-grid single"><div class="hero-main">
+      <span class="cover-kicker">CESDE · Técnicos Laborales · 24 de noviembre de 2026</span>
+      <h1>Becas Comfama 2027-1 · Gestión al 24 noviembre 2026</h1>
+      <p class="lead">Primera semana de la campaña de becas en Meta, del 18 al 24 de noviembre. La campaña lleva a las personas directo al formulario de inscripción de Comfama. Las inscripciones las reporta Comfama y todavía no tenemos esa cifra.</p>
+      <div class="hero-metrics">
+        <span><strong>4.003</strong> visitas al formulario</span>
+        <span><strong>17,0%</strong> del presupuesto invertido</span>
+        <span><strong>$212</strong> por visita</span>
+        <span><strong>16</strong> anuncios activos en 4 sedes</span>
+      </div>
+    </div></div>
+  </header>
+  <main class="report-shell only-preview">
+
+    <section class="block" id="resumen">
+      <div class="section-top"><div class="slide-header"><h2>Cómo va</h2></div></div>
+      <div class="bx-grid">
+        <article class="bx-card">
+          <h3>Ritmo del presupuesto</h3>
+          <p class="bx-big">17,0%</p>
+          <p>$847.517 de $5.000.000 invertidos en 7 de 59 días.</p>
+          <div class="bx-pace" role="img" aria-label="17,0% del presupuesto invertido frente a 11,9% del tiempo transcurrido"><i style="width:17.0%"></i><b style="left:11.9%"></b></div>
+          <div class="bx-pace-l"><span>Barra: presupuesto invertido</span><span>Línea: 11,9% del tiempo</span></div>
+          <span class="bx-tag">Va por delante del calendario</span>
+        </article>
+        <article class="bx-card">
+          <h3>Visitas al formulario</h3>
+          <p class="bx-big">4.003</p>
+          <p>De 4.878 clics en los anuncios, 82% terminaron en una visita a la página de inscripción.</p>
+        </article>
+        <article class="bx-card">
+          <h3>Costo por visita</h3>
+          <p class="bx-big">$212</p>
+          <p>Medellín es la más barata ($182) y Apartadó la más cara ($314).</p>
+        </article>
+      </div>
+      <div class="bx-say">
+        <div><strong>El gasto va más rápido que el calendario.</strong> Al ritmo actual (unos $129.500 al día) el presupuesto se agotaría hacia el 27 de diciembre, unos 19 días antes del cierre del 15 de enero.</div>
+        <div><strong>Apartadó rinde menos.</strong> Tiene un solo anuncio y el menor porcentaje de clic (1,9% frente a 2,6% o más en las otras sedes).</div>
+        <div><strong>Falta el dato que importa:</strong> cuántas personas terminan la inscripción en Comfama. Sin esa cifra no se puede calcular el costo por inscripción.</div>
+      </div>
+    </section>
+
+    <section class="block" id="sedes">
+      <div class="section-top"><div class="slide-header"><h2>Por sede</h2></div><p class="section-note">Del 18 al 24 de noviembre. El 18 la campaña empezó a las 3:30 p. m.</p></div>
+      <div class="bx-grid">
+        <div class="bx-panel">
+          <h3>Inversión frente al presupuesto</h3>
+          <p class="sub">La línea negra marca el 11,9% del tiempo transcurrido: todas las sedes van por delante.</p>
+          <div class="bx-row"><span class="bx-l">Medellín</span><span class="bx-track" title="$175.534 de $1.000.000"><i class="is-on" style="width:17.6%"></i><b class="bx-mark" style="left:11.9%"></b></span><span class="bx-v">$175.534 <small>de $1.000.000 · 17,6%</small></span></div><div class="bx-row"><span class="bx-l">Bello</span><span class="bx-track" title="$290.690 de $1.750.000"><i class="is-on" style="width:16.6%"></i><b class="bx-mark" style="left:11.9%"></b></span><span class="bx-v">$290.690 <small>de $1.750.000 · 16,6%</small></span></div><div class="bx-row"><span class="bx-l">Rionegro</span><span class="bx-track" title="$294.925 de $1.750.000"><i class="is-on" style="width:16.9%"></i><b class="bx-mark" style="left:11.9%"></b></span><span class="bx-v">$294.925 <small>de $1.750.000 · 16,9%</small></span></div><div class="bx-row"><span class="bx-l">Apartadó</span><span class="bx-track" title="$86.368 de $500.000"><i class="is-on" style="width:17.3%"></i><b class="bx-mark" style="left:11.9%"></b></span><span class="bx-v">$86.368 <small>de $500.000 · 17,3%</small></span></div>
+        </div>
+        <div class="bx-panel">
+          <h3>Costo por visita</h3>
+          <p class="sub">En amarillo, la sede más barata. Una visita es una persona que abre la página de inscripción.</p>
+          <div class="bx-row"><span class="bx-l">Medellín</span><span class="bx-track"><i class="is-on" style="width:57.8%"></i></span><span class="bx-v">$182</span></div><div class="bx-row"><span class="bx-l">Bello</span><span class="bx-track"><i class="" style="width:63.2%"></i></span><span class="bx-v">$198</span></div><div class="bx-row"><span class="bx-l">Rionegro</span><span class="bx-track"><i class="" style="width:72.5%"></i></span><span class="bx-v">$228</span></div><div class="bx-row"><span class="bx-l">Apartadó</span><span class="bx-track"><i class="" style="width:100.0%"></i></span><span class="bx-v">$314</span></div>
+        </div>
+      </div>
+      <details class="bx-det"><summary>Ver el detalle en tabla</summary>
+      <div class="table-wrap"><table class="plan">
+        <thead><tr><th>Sede</th><th class="num">Presupuesto</th><th class="num">Invertido</th><th class="num">% del presupuesto</th><th class="num">Clics</th><th class="num">Visitas</th><th class="num">Costo por visita</th><th class="num">Veces que cada persona vio el anuncio</th></tr></thead>
+        <tbody>
+<tr><td>Medellín</td><td class="num">$1.000.000</td><td class="num">$175.534</td><td class="num">17,6%</td><td class="num">1.185</td><td class="num">967</td><td class="num">$182</td><td class="num">1,3</td></tr><tr><td>Bello</td><td class="num">$1.750.000</td><td class="num">$290.690</td><td class="num">16,6%</td><td class="num">1.743</td><td class="num">1.465</td><td class="num">$198</td><td class="num">1,7</td></tr><tr><td>Rionegro</td><td class="num">$1.750.000</td><td class="num">$294.925</td><td class="num">16,9%</td><td class="num">1.601</td><td class="num">1.296</td><td class="num">$228</td><td class="num">2,2</td></tr><tr><td>Apartadó</td><td class="num">$500.000</td><td class="num">$86.368</td><td class="num">17,3%</td><td class="num">349</td><td class="num">275</td><td class="num">$314</td><td class="num">2,3</td></tr>
+<tr class="total"><td>Total</td><td class="num">$5.000.000</td><td class="num">$847.517</td><td class="num">17,0%</td><td class="num">4.878</td><td class="num">4.003</td><td class="num">$212</td><td class="num">–</td></tr>
+        </tbody>
+      </table></div></details>
+      <ul class="notes">
+        <li>Rionegro y Apartadó ya muestran sus anuncios más de 2 veces a cada persona en una semana (2,2 y 2,3); en Medellín son 1,3. En ciudades más pequeñas el público se agota antes y quedan 52 días de campaña.</li>
+      </ul>
+    </section>
+
+    <section class="block" id="dias">
+      <div class="section-top"><div class="slide-header"><h2>Día por día</h2></div><p class="section-note">* El 18 la campaña empezó a las 3:30 p. m. (barra rayada).</p></div>
+      <div class="bx-grid">
+        <div class="bx-panel"><h3>Inversión diaria</h3><p class="sub">Miles de pesos por día.</p><div class="bx-cols"><div class="bx-col is-part" title="18 nov*: $70.731"><span class="bx-cv">71<small>mil</small></span><i style="height:39.3%"></i><span class="bx-cl">18 nov*</span></div><div class="bx-col" title="19 nov: $147.749"><span class="bx-cv">148<small>mil</small></span><i style="height:82.0%"></i><span class="bx-cl">19 nov</span></div><div class="bx-col" title="20 nov: $119.350"><span class="bx-cv">119<small>mil</small></span><i style="height:66.2%"></i><span class="bx-cl">20 nov</span></div><div class="bx-col" title="21 nov: $142.636"><span class="bx-cv">143<small>mil</small></span><i style="height:79.2%"></i><span class="bx-cl">21 nov</span></div><div class="bx-col" title="22 nov: $126.518"><span class="bx-cv">127<small>mil</small></span><i style="height:70.2%"></i><span class="bx-cl">22 nov</span></div><div class="bx-col" title="23 nov: $117.270"><span class="bx-cv">117<small>mil</small></span><i style="height:65.1%"></i><span class="bx-cl">23 nov</span></div><div class="bx-col" title="24 nov: $123.263"><span class="bx-cv">123<small>mil</small></span><i style="height:68.4%"></i><span class="bx-cl">24 nov</span></div></div></div>
+        <div class="bx-panel"><h3>Visitas al formulario</h3><p class="sub">Visitas por día.</p><div class="bx-cols"><div class="bx-col is-part" title="18 nov*: 228 visitas"><span class="bx-cv">228</span><i style="height:27.1%"></i><span class="bx-cl">18 nov*</span></div><div class="bx-col" title="19 nov: 678 visitas"><span class="bx-cv">678</span><i style="height:80.6%"></i><span class="bx-cl">19 nov</span></div><div class="bx-col" title="20 nov: 574 visitas"><span class="bx-cv">574</span><i style="height:68.2%"></i><span class="bx-cl">20 nov</span></div><div class="bx-col" title="21 nov: 690 visitas"><span class="bx-cv">690</span><i style="height:82.0%"></i><span class="bx-cl">21 nov</span></div><div class="bx-col" title="22 nov: 633 visitas"><span class="bx-cv">633</span><i style="height:75.2%"></i><span class="bx-cl">22 nov</span></div><div class="bx-col" title="23 nov: 582 visitas"><span class="bx-cv">582</span><i style="height:69.2%"></i><span class="bx-cl">23 nov</span></div><div class="bx-col" title="24 nov: 618 visitas"><span class="bx-cv">618</span><i style="height:73.4%"></i><span class="bx-cl">24 nov</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="block" id="piezas">
+      <div class="section-top"><div class="slide-header"><h2>Qué piezas llevan el gasto</h2></div><p class="section-note">Meta reparte la inversión de cada sede entre sus anuncios y se está quedando con el video: concentra el 90% del gasto en Bello, el 88% en Rionegro y el 75% en Medellín.</p></div>
+      <div class="bx-stack" role="img" aria-label="Reparto del gasto por tipo de pieza"><span class="s1" style="width:77.0%">Video 77%</span><span class="s2" style="width:13.4%">Carrusel 13%</span><span class="s3" style="width:9.6%">Pub. 10%</span></div>
+      <div class="bx-pzs"><article class="bx-pz is-top"><img loading="lazy" src="../assets/img/reports/becas-comfama-20261118/medellin-video-cuadrado.jpg" alt="Video · Medellín, Bello y Rionegro"><div><h4>Video · Medellín, Bello y Rionegro</h4><p class="bx-big">$652.707</p><p>77,0% del gasto</p><p>3.311 visitas · <strong>$197</strong> por visita</p></div></article><article class="bx-pz"><img loading="lazy" src="../assets/img/reports/becas-comfama-20261118/medellin-carrusel-1.jpg" alt="Carrusel · Medellín, Bello y Rionegro"><div><h4>Carrusel · Medellín, Bello y Rionegro</h4><p class="bx-big">$27.349</p><p>3,2% del gasto</p><p>110 visitas · <strong>$249</strong> por visita</p></div></article><article class="bx-pz"><img loading="lazy" src="../assets/img/reports/becas-comfama-20261118/apartado-carrusel-1.jpg" alt="Carrusel · Apartadó"><div><h4>Carrusel · Apartadó</h4><p class="bx-big">$86.367</p><p>10,2% del gasto</p><p>275 visitas · <strong>$314</strong> por visita</p></div></article><article class="bx-pz"><img loading="lazy" src="../assets/img/reports/becas-comfama-20261118/medellin-post1-post.jpg" alt="Publicación 1"><div><h4>Publicación 1</h4><p class="bx-big">$26.042</p><p>3,1% del gasto</p><p>96 visitas · <strong>$271</strong> por visita</p></div></article><article class="bx-pz"><img loading="lazy" src="../assets/img/reports/becas-comfama-20261118/medellin-post2-post.jpg" alt="Publicación 2"><div><h4>Publicación 2</h4><p class="bx-big">$38.665</p><p>4,6% del gasto</p><p>147 visitas · <strong>$263</strong> por visita</p></div></article><article class="bx-pz"><img loading="lazy" src="../assets/img/reports/becas-comfama-20261118/medellin-post3-post.jpg" alt="Publicación 3"><div><h4>Publicación 3</h4><p class="bx-big">$16.387</p><p>1,9% del gasto</p><p>64 visitas · <strong>$256</strong> por visita</p></div></article></div>
+      <ul class="notes">
+        <li>El video es la pieza más barata por visita ($197 frente a $264 de las publicaciones y $295 de los carruseles).</li>
+        <li>Las publicaciones y los carruseles de Medellín, Bello y Rionegro recibieron entre 400 y 5.100 impresiones cada uno: con tan poco volumen no se puede decir cuál funciona mejor. El carrusel de Apartadó sí tuvo volumen porque es su único anuncio.</li>
+        <li>Para comparar piezas de verdad, cada una necesitaría presupuesto propio. Hoy la campaña se comporta como una campaña de video.</li>
+      </ul>
+    </section>
+
+    <section class="block" id="ubicaciones">
+      <div class="section-top"><div class="slide-header"><h2>Dónde se muestran los anuncios</h2></div><p class="section-note">El 94% de la inversión se muestra en Facebook y el 5% en Instagram.</p></div>
+      <div class="bx-panel" style="margin-top:22px">
+        <h3>Costo por visita según la ubicación</h3>
+        <p class="sub">Feed de Facebook e Instagram, Reels, Historias y otras ubicaciones. En amarillo, la más cara; entre paréntesis, la parte del gasto que recibe.</p>
+        <div class="bx-row"><span class="bx-l">Feed</span><span class="bx-track"><i class="" style="width:74.6%"></i></span><span class="bx-v">$205 <small>(55% del gasto)</small></span></div><div class="bx-row"><span class="bx-l">Reels</span><span class="bx-track"><i class="" style="width:74.2%"></i></span><span class="bx-v">$204 <small>(29% del gasto)</small></span></div><div class="bx-row"><span class="bx-l">Historias</span><span class="bx-track"><i class="is-on" style="width:100.0%"></i></span><span class="bx-v">$275 <small>(11% del gasto)</small></span></div><div class="bx-row"><span class="bx-l">Otras</span><span class="bx-track"><i class="" style="width:84.9%"></i></span><span class="bx-v">$233 <small>(5% del gasto)</small></span></div>
+      </div>
+      <ul class="notes">
+        <li>Las historias cuestan 4,0 veces más por cada mil impresiones que el feed ($13.680 frente a $3.463) y traen la visita más cara. Es donde primero habría que mirar para bajar el costo.</li>
+      </ul>
+    </section>
+
+    <section class="block" id="pendientes">
+      <div class="section-top"><div class="slide-header"><h2>Próximos pasos</h2></div><p class="section-note">Son propuestas. Ninguna está ejecutada.</p></div>
+      <div class="bx-steps">
+        <div class="bx-step"><h4>Ajustar el ritmo del gasto</h4><p>Frenar el gasto para que el presupuesto alcance hasta el 15 de enero, sin cambiar piezas ni sedes.</p></div>
+        <div class="bx-step"><h4>Pedir las inscripciones a Comfama</h4><p>Cuántas llegaron desde los anuncios de CESDE, por sede. Los enlaces traen la marca <code>typeform-source=fbpaidcesde</code> y la sede en <code>utm_term</code>. Primer corte el 1 de diciembre y luego cada dos semanas.</p></div>
+        <div class="bx-step"><h4>Confirmar fechas de cierre</h4><p>Hoy los cuatro conjuntos terminan el 15 de enero. CESDE confirma la fecha de cierre de la oferta en cada sede para apagar los anuncios a tiempo.</p></div>
+        <div class="bx-step"><h4>Reforzar Apartadó</h4><p>Sumar una o dos piezas de las que ya existen en las otras sedes y mirar si baja el costo por visita.</p></div>
+        <div class="bx-step"><h4>Probar sin historias</h4><p>En una sede, apagar esa ubicación y comparar el costo por visita. Vigilar además cuántas veces ven los anuncios las mismas personas en Rionegro y Apartadó.</p></div>
+      </div>
+    </section>
+
+    <section class="block" id="fuentes">
+      <div class="section-top"><div class="slide-header"><h2>De dónde salen las cifras</h2></div></div>
+      <ul class="notes">
+        <li>Meta Ads, cuenta ADCOM 2023 - CESDE, campaña «TECPERF - Becas Comfama CESDE Multisede 2027-1_Oficial». Ventana del 18 al 24 de noviembre de 2026, días completos.</li>
+        <li>Una «visita» es una persona que abre la página de inscripción después de hacer clic en el anuncio, medida por Meta. No es una inscripción.</li>
+        <li>Las inscripciones se completan en el formulario de Comfama y no pasan por el CRM de CESDE: no están en este informe. Las piezas y su configuración están en la <a href="becas-comfama-2026-11-18.html">página de implementación</a>.</li>
+      </ul>
+    </section>
+
+    <a class="back-link" href="../index.html">&larr; Volver a documentos</a>
+  </main>
+</body>
+</html>
