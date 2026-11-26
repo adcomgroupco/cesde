@@ -1,0 +1,211 @@
+{
+  "generated_at": "2026-11-24T22:20:18.171309+00:00",
+  "operation_id": "cesde-tecper-black-friday-20261124",
+  "plan_source": "config\\implementaciones\\cesde\\2026-11-24-tecper-black-friday.yaml",
+  "execute": true,
+  "status": "ACTIVE",
+  "missing_media": [],
+  "forms": {},
+  "structure": {
+    "structures": {
+      "med": {
+        "campaign": {
+          "action": "created",
+          "campaign_id": "120250200995720243"
+        },
+        "adset": {
+          "action": "created",
+          "adset_id": "120250200995950243"
+        }
+      },
+      "bello": {
+        "campaign": {
+          "action": "created",
+          "campaign_id": "120250200996290243"
+        },
+        "adset": {
+          "action": "created",
+          "adset_id": "120250200996480243"
+        }
+      },
+      "rionegro": {
+        "campaign": {
+          "action": "created",
+          "campaign_id": "120250200996760243"
+        },
+        "adset": {
+          "action": "created",
+          "adset_id": "120250200997250243"
+        }
+      }
+    },
+    "audiences": {}
+  },
+  "plan": [
+    {
+      "ad_name": "Black Friday 30%_24/11",
+      "target": "med",
+      "adset_id": "120250200995950243",
+      "form": null,
+      "form_id": "707618999052503",
+      "mode": "en_linea",
+      "source_ad": null,
+      "media_kind": "image",
+      "feed_asset": "C:\\Users\\danie\\Downloads\\Image.png",
+      "vertical_asset": "C:\\Users\\danie\\Downloads\\Image (1).png",
+      "portrait_asset": null,
+      "body": "Black Days en CESDE | Comfama 🖤\n\n30 % de descuento en tu primer semestre. Del 26 al 30 de noviembre de 2026.\n\n¡Matricúlate ahora!\n\nAplican términos y condiciones. Descuento no acumulable con becas.",
+      "on_existing": "reuse"
+    },
+    {
+      "ad_name": "Black Friday 30%_24/11",
+      "target": "bello",
+      "adset_id": "120250200996480243",
+      "form": null,
+      "form_id": "1166095161643403",
+      "mode": "en_linea",
+      "source_ad": null,
+      "media_kind": "image",
+      "feed_asset": "C:\\Users\\danie\\Downloads\\Image.png",
+      "vertical_asset": "C:\\Users\\danie\\Downloads\\Image (1).png",
+      "portrait_asset": null,
+      "body": "Black Days en CESDE | Comfama 🖤\n\n30 % de descuento en tu primer semestre. Del 26 al 30 de noviembre de 2026.\n\n¡Matricúlate ahora!\n\nAplican términos y condiciones. Descuento no acumulable con becas.",
+      "on_existing": "reuse"
+    },
+    {
+      "ad_name": "Black Friday 30%_24/11",
+      "target": "rionegro",
+      "adset_id": "120250200997250243",
+      "form": null,
+      "form_id": "1846432546262110",
+      "mode": "en_linea",
+      "source_ad": null,
+      "media_kind": "image",
+      "feed_asset": "C:\\Users\\danie\\Downloads\\Image.png",
+      "vertical_asset": "C:\\Users\\danie\\Downloads\\Image (1).png",
+      "portrait_asset": null,
+      "body": "Black Days en CESDE | Comfama 🖤\n\n30 % de descuento en tu primer semestre. Del 26 al 30 de noviembre de 2026.\n\n¡Matricúlate ahora!\n\nAplican términos y condiciones. Descuento no acumulable con becas.",
+      "on_existing": "reuse"
+    }
+  ],
+  "errors": [],
+  "adset_limits": [],
+  "uploaded_assets": {
+    "C:\\Users\\danie\\Downloads\\Image.png": {
+      "asset_id": "8dde223f025c91a162eb8182c937c64e",
+      "action": "uploaded"
+    },
+    "C:\\Users\\danie\\Downloads\\Image (1).png": {
+      "asset_id": "a08cb13b224eddc873289bc658c4bbf0",
+      "action": "uploaded"
+    }
+  },
+  "adset_updates": [],
+  "results": [
+    {
+      "ad_name": "Black Friday 30%_24/11",
+      "target": "med",
+      "action": "created",
+      "creative_action": "created",
+      "creative_id": "2706926273083388",
+      "ad_id": "120250200998200243"
+    },
+    {
+      "ad_name": "Black Friday 30%_24/11",
+      "target": "bello",
+      "action": "created",
+      "creative_action": "created",
+      "creative_id": "1569555741883205",
+      "ad_id": "120250200998560243"
+    },
+    {
+      "ad_name": "Black Friday 30%_24/11",
+      "target": "rionegro",
+      "action": "created",
+      "creative_action": "created",
+      "creative_id": "2323958248173326",
+      "ad_id": "120250200999180243"
+    }
+  ],
+  "campaign_updates": [],
+  "audit": [
+    {
+      "ad_name": "Black Friday 30%_24/11",
+      "adset_id": "120250200995950243",
+      "ad_id": "120250200998200243",
+      "effective_status": "IN_PROCESS",
+      "checks": {
+        "configured_status": true,
+        "effective_status_accepted": true,
+        "form": true,
+        "media_format": true,
+        "asset_variants": true,
+        "placement_rules": true
+      },
+      "ok": true
+    },
+    {
+      "ad_name": "Black Friday 30%_24/11",
+      "adset_id": "120250200996480243",
+      "ad_id": "120250200998560243",
+      "effective_status": "IN_PROCESS",
+      "checks": {
+        "configured_status": true,
+        "effective_status_accepted": true,
+        "form": true,
+        "media_format": true,
+        "asset_variants": true,
+        "placement_rules": true
+      },
+      "ok": true
+    },
+    {
+      "ad_name": "Black Friday 30%_24/11",
+      "adset_id": "120250200997250243",
+      "ad_id": "120250200999180243",
+      "effective_status": "IN_PROCESS",
+      "checks": {
+        "configured_status": true,
+        "effective_status_accepted": true,
+        "form": true,
+        "media_format": true,
+        "asset_variants": true,
+        "placement_rules": true
+      },
+      "ok": true
+    }
+  ],
+  "audit_ok": true,
+  "checkpoint": {
+    "operation_id": "cesde-tecper-black-friday-20261124",
+    "path": "C:\\Users\\danie\\Documents\\Adcom\\Media bridge Adcom\\data\\cache\\meta_operations\\cesde-tecper-black-friday-20261124.json",
+    "completed_steps": 6,
+    "updated_at": "2026-11-24T22:21:01.980427+00:00"
+  },
+  "api": {
+    "requests": 28,
+    "successful_requests": 28,
+    "rate_limits": 0,
+    "transport_retries": 0,
+    "server_retries": 0,
+    "proactive_waits": 0,
+    "slept_seconds": 0.0,
+    "last_usage": {
+      "app": {},
+      "ad_account": {},
+      "business": {
+        "236065353543774": [
+          {
+            "type": "ads_management",
+            "call_count": 1,
+            "total_cputime": 3,
+            "total_time": 11,
+            "estimated_time_to_regain_access": 0,
+            "ads_api_access_tier": "development_access"
+          }
+        ]
+      },
+      "max_percentage": 11.0
+    }
+  }
+}

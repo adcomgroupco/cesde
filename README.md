@@ -84,6 +84,7 @@ son el mismo.
 
 | Documento | Ruta |
 |---|---|
+| [Black Days 2027-1 · Implementación 26 noviembre 2026](tecnicos/black-days-2026-11-26.html) | `tecnicos/black-days-2026-11-26.html` |
 | [Becas Comfama 2027-1 · Gestión al 24 noviembre 2026](tecnicos/becas-comfama-gestion-2026-11-24.html) | `tecnicos/becas-comfama-gestion-2026-11-24.html` |
 | [Ajuste por cumplimiento de metas · 24 noviembre 2026](tecnicos/ajuste-cumplimiento-2026-11-24.html) | `tecnicos/ajuste-cumplimiento-2026-11-24.html` |
 | [Becas Comfama 2027-1 · 18 noviembre 2026](tecnicos/becas-comfama-2026-11-18.html) | `tecnicos/becas-comfama-2026-11-18.html` |
